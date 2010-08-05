@@ -1,6 +1,6 @@
-*******************************************
+###########################################
 Alex Dubov's assorted thoughts and articles
-*******************************************
+###########################################
 
 In this collection of articles, I'll try to develop several ideas, which,
 to my understanding, may be useful in developing better, more conveninent
