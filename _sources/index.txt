@@ -12,6 +12,6 @@ a good sense of priorities and features required.
 .. toctree::
    :maxdepth: 2
 
-   Windowing system of the future <jx.rst>
    Treatise on copyright and preservation <cright.rst>
+   Windowing system of the future <jx.rst>
 
