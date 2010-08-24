@@ -327,3 +327,5 @@ utilise the collective intelligence or give up technological progress outright.
 Therefore, issues of collective thought management must be brought to the
 forefront of public discussion and dealt with actively, despite the giant
 obstacles imposed by ignorance and greed.
+
+`General comments, corrections, objections? <http://github.com/oakad/oakad.github.com/issues#issue/1>`_
