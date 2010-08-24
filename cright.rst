@@ -146,9 +146,9 @@ this exploitation must be regulated, in a way analogous to a system, set up for
 owners of heritage listed real estate properties. This is to be done for the
 greater good of society in general.
 
-***********************************************
+************************************************
 Properties possessed by imaginary property items
-***********************************************
+************************************************
 
 Value, contained by the imaginary property item resides purely within
 information domain. Vast majority of newly created works comes into existence
