@@ -64,16 +64,16 @@ individually accessible physical storage location and has a size of 1.
 
 Byte type values can be composed into combinations of three basic constructs:
 
-# ``Array`` densely packs set number of values in consecutive locations of the
-  physical storage. Short array of bytes can be used to represent all the basic
-  numeric types, apart from other useful things.
-# ``Tuple`` (or structure) defines a value composed of several differently typed
-  values, possibly named. It also affects name resolution rules in functions
-  taking it as argument.
-# ``Variant`` (or discriminating union) represents a value which can be of
-  one of the data types defined in the variant's declaration. Unlike C unions,
-  it can not be assigned as one data type, then taken as another. Rather, it
-  "remembers" the type it was assigned to last time.
+#. ``Array`` densely packs set number of values in consecutive locations of the
+   physical storage. Short array of bytes can be used to represent all the basic
+   numeric types, apart from other useful things.
+#. ``Tuple`` (or structure) defines a value composed of several differently
+   typed values, possibly named. It also affects name resolution rules in
+   functions taking it as argument.
+#. ``Variant`` (or discriminating union) represents a value which can be of
+   one of the data types defined in the variant's declaration. Unlike C unions,
+   it can not be assigned as one data type, then taken as another. Rather, it
+   "remembers" the type it was assigned to last time.
 
 It is expected, that these constructs, no matter how intricately interposed,
 should have a zero size if now actual byte values are present in their

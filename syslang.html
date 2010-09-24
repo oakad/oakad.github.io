@@ -101,18 +101,18 @@ of this feature).</p>
 which I shall call <tt class="docutils literal"><span class="pre">byte</span> <span class="pre">type</span></tt>. This data type represents smallest
 individually accessible physical storage location and has a size of 1.</p>
 <p>Byte type values can be composed into combinations of three basic constructs:</p>
-<dl class="docutils">
-<dt># <tt class="docutils literal"><span class="pre">Array</span></tt> densely packs set number of values in consecutive locations of the</dt>
-<dd>physical storage. Short array of bytes can be used to represent all the basic
-numeric types, apart from other useful things.</dd>
-<dt># <tt class="docutils literal"><span class="pre">Tuple</span></tt> (or structure) defines a value composed of several differently typed</dt>
-<dd>values, possibly named. It also affects name resolution rules in functions
-taking it as argument.</dd>
-<dt># <tt class="docutils literal"><span class="pre">Variant</span></tt> (or discriminating union) represents a value which can be of</dt>
-<dd>one of the data types defined in the variant&#8217;s declaration. Unlike C unions,
+<ol class="arabic simple">
+<li><tt class="docutils literal"><span class="pre">Array</span></tt> densely packs set number of values in consecutive locations of the
+physical storage. Short array of bytes can be used to represent all the basic
+numeric types, apart from other useful things.</li>
+<li><tt class="docutils literal"><span class="pre">Tuple</span></tt> (or structure) defines a value composed of several differently
+typed values, possibly named. It also affects name resolution rules in
+functions taking it as argument.</li>
+<li><tt class="docutils literal"><span class="pre">Variant</span></tt> (or discriminating union) represents a value which can be of
+one of the data types defined in the variant&#8217;s declaration. Unlike C unions,
 it can not be assigned as one data type, then taken as another. Rather, it
-&#8220;remembers&#8221; the type it was assigned to last time.</dd>
-</dl>
+&#8220;remembers&#8221; the type it was assigned to last time.</li>
+</ol>
 <p>It is expected, that these constructs, no matter how intricately interposed,
 should have a zero size if now actual byte values are present in their
 definitions, serving only for compile-time metaprograming purposes.</p>
