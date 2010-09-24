@@ -13,5 +13,7 @@ a good sense of priorities and features required.
    :maxdepth: 2
 
    Treatise on copyright and preservation <cright.rst>
+   Patents in the modern age <patent.rst>
+   Language for system programing <syslang.rst>
    Windowing system of the future <jx.rst>
 

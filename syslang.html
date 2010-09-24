@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Language for system programing, or C is not going to stay here forever &mdash; Alex Dubov&#39;s assorted articles</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="top" title="Alex Dubov&#39;s assorted articles" href="index.html" />
+    <link rel="next" title="Windowing system of the future in the mirror of the present" href="jx.html" />
+    <link rel="prev" title="Treatise on applicability of patents in the modern age" href="patent.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="jx.html" title="Windowing system of the future in the mirror of the present"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="patent.html" title="Treatise on applicability of patents in the modern age"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Alex Dubov&#39;s assorted articles</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="language-for-system-programing-or-c-is-not-going-to-stay-here-forever">
+<h1>Language for system programing, or C is not going to stay here forever<a class="headerlink" href="#language-for-system-programing-or-c-is-not-going-to-stay-here-forever" title="Permalink to this headline">¶</a></h1>
+<p><em>This article is still being written.</em></p>
+<p>It so happens, that both in development of new programing languages, as well
+as in development of new operating systems, the issue of IO and interaction
+with machine hardware in general is often neglected. Fancy abstractions,
+breath-taking in their elegance or, to the contrary, excessive simplification
+of language constructs and idioms draw almost all of the attention of language
+designers. Yet, apart from focusing on the logical and psychological aspects
+of software engineering, it seems worthwhile to pay some attention to the
+real world machines and create a language which will target the hard task of
+direct hardware management.</p>
+<p>No wonder that C programing language remains a mainstay of system programing for
+nearly 40 years already. There simply was no worthy successor to take on the
+task. One of the honourable reasons for this, is of course a considerable
+wisdom (if not genius) of its original designers, who were able to clearly
+identify the goals and needs of a basic system language. C++, which aimed to
+become such a successor, had essentially failed in this task.</p>
+<p>Here I would like to point out, that, to my opinion, modern C++ is the most
+powerful and versatile language in existence, and well written programs in it
+are often exceptionally elegant. Yet, to be used in a system role it must be
+necessarily reduced to a subset of its features and, therefore, loses a lot of
+its innate flexibility.</p>
+<div class="section" id="what-is-really-needed-from-the-system-programing-language">
+<h2>What is really needed from the system programing language?<a class="headerlink" href="#what-is-really-needed-from-the-system-programing-language" title="Permalink to this headline">¶</a></h2>
+<p>Every good design must build on a solid conceptual foundation. For a system
+language, the main law by which it should behave can be stated as <em>&#8220;no run-time
+magic&#8221;</em>. The exact behaviour of program in run-time should be more or less
+obvious from the inspection of source code.</p>
+<p>We can identify two major sorts of &#8220;magic&#8221;: storage domain and time domain one.
+Examples of storage domain magic include things like C++ vtables or,
+generally, object/value storage layout as (not)defined by most modern high-level
+languages. Time domain magic is represented by rather non-trivial run-time
+functionality needed to make constructors, destructors (if present in the
+language) and exceptions work. Garbage collectors also belong to the category
+of time domain magical things, and in some more advanced cases, this epithet is
+not even slightly exaggerating.</p>
+<p>On the other hand, there are plenty of compile time constructs that new
+language can and should support. Functional classes (interfaces), type
+inference, patterns (or templates), name spaces - all these allow development
+of most complicated programs without the need to rely on any complicated and
+non-obvious run-time requirements. Partial application and closures are also
+a necessity, to the extent possible (the limitations are those imposed by
+stack based activation record mechanism, as apparent in C/C++ implementation
+of this feature).</p>
+</div>
+<div class="section" id="type-system-and-basic-data-structures">
+<h2>Type system and basic data structures<a class="headerlink" href="#type-system-and-basic-data-structures" title="Permalink to this headline">¶</a></h2>
+<p>On the most basic level the language should possess exactly one data type,
+which I shall call <tt class="docutils literal"><span class="pre">byte</span> <span class="pre">type</span></tt>. This data type represents smallest
+individually accessible physical storage location and has a size of 1.</p>
+<p>Byte type values can be composed into combinations of three basic constructs:</p>
+<dl class="docutils">
+<dt># <tt class="docutils literal"><span class="pre">Array</span></tt> densely packs set number of values in consecutive locations of the</dt>
+<dd>physical storage. Short array of bytes can be used to represent all the basic
+numeric types, apart from other useful things.</dd>
+<dt># <tt class="docutils literal"><span class="pre">Tuple</span></tt> (or structure) defines a value composed of several differently typed</dt>
+<dd>values, possibly named. It also affects name resolution rules in functions
+taking it as argument.</dd>
+<dt># <tt class="docutils literal"><span class="pre">Variant</span></tt> (or discriminating union) represents a value which can be of</dt>
+<dd>one of the data types defined in the variant&#8217;s declaration. Unlike C unions,
+it can not be assigned as one data type, then taken as another. Rather, it
+&#8220;remembers&#8221; the type it was assigned to last time.</dd>
+</dl>
+<p>It is expected, that these constructs, no matter how intricately interposed,
+should have a zero size if now actual byte values are present in their
+definitions, serving only for compile-time metaprograming purposes.</p>
+<p>Functional closures shall have their own data type as well.</p>
+<p>Just like in C++, values can be passed around as copies, as well as by pointers
+or references (safe pointers, which can only be assigned during construction).</p>
+<p>Type aliases are of &#8220;strong&#8221; nature - data types having identical structure, but
+different names are considered completely different. This also implies that
+array and function value types are not identical to pointers, rather they are
+close in nature to C++ array&lt;&gt; and function&lt;&gt; templates.</p>
+<p>All values have, by default, copy and literal constructors whose syntax is
+different from normal function definition. The idea is to only allow
+constructors, which can not fail by their definition, while still allowing
+the programmer to automate, somewhat, creation and copying of values.</p>
+<p>Destructors, which are also customarily assumed to never fail are implemented as
+aptly named function variable within a tuple (with a special built in behaviour
+for arrays of tuples). It should be possible to infer through static analysis if
+a particular variable has destructor functions and emit a code to call
+destructors in required order where needed (while this may border on &#8220;magic&#8221;
+as defined above, it is of relatively innocent kind).</p>
+</div>
+<div class="section" id="syntactic-features">
+<h2>Syntactic features<a class="headerlink" href="#syntactic-features" title="Permalink to this headline">¶</a></h2>
+<p>To be written together with the prototype code.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Language for system programing, or C is not going to stay here forever</a><ul>
+<li><a class="reference internal" href="#what-is-really-needed-from-the-system-programing-language">What is really needed from the system programing language?</a></li>
+<li><a class="reference internal" href="#type-system-and-basic-data-structures">Type system and basic data structures</a></li>
+<li><a class="reference internal" href="#syntactic-features">Syntactic features</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="patent.html"
+                        title="previous chapter">Treatise on applicability of patents in the modern age</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="jx.html"
+                        title="next chapter">Windowing system of the future in the mirror of the present</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/syslang.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="jx.html" title="Windowing system of the future in the mirror of the present"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="patent.html" title="Treatise on applicability of patents in the modern age"
+             >previous</a> |</li>
+        <li><a href="index.html">Alex Dubov&#39;s assorted articles</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; <a href="copyright.html">Copyright</a> 2010, Alex Dubov &lt;oakad@yahoo.com&gt;.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.1.
+    </div>
+  </body>
+</html>
