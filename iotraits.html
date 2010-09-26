@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Brief discussion of input/output interface traits &mdash; Alex Dubov&#39;s assorted articles</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="top" title="Alex Dubov&#39;s assorted articles" href="index.html" />
+    <link rel="up" title="Useful components for the prosperous future" href="index-ucpf.html" />
+    <link rel="next" title="Windowing system of the future in the mirror of the present" href="jx.html" />
+    <link rel="prev" title="Language for system programing, or C is not going to stay here forever" href="syslang.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="jx.html" title="Windowing system of the future in the mirror of the present"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="syslang.html" title="Language for system programing, or C is not going to stay here forever"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Alex Dubov&#39;s assorted articles</a> &raquo;</li>
+          <li><a href="index-ucpf.html" accesskey="U">Useful components for the prosperous future</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="brief-discussion-of-input-output-interface-traits">
+<h1>Brief discussion of input/output interface traits<a class="headerlink" href="#brief-discussion-of-input-output-interface-traits" title="Permalink to this headline">¶</a></h1>
+<p>Despite the considerable number of different programing interfaces, which are
+present in the popular and not so much operating systems, there are,
+essentially, less than two real ways to perform input/output operations. It
+seems worthwhile to analyse these methods briefly, as a useful exercise and a
+reminder.</p>
+<p>First, we need to establish, what does I/O operation means. In its simplest
+form, I/O corresponds to retrieval of the information which can not be obtained
+through local memory access, or, in other words, fetched by short enough CPU
+command sequence on behalf of currently executing program. Of course, really
+useful information almost never can be found locally (this is, undoubtedly, one
+of the greatest creation mysteries), so any non-trivial program devotes major
+parts of its code and run time to the matters of information I/O.</p>
+<p>As a side note, I happen to think, that such magnificent programing languages
+like <a class="reference external" href="http://en.wikipedia.org/wiki/Haskell_(programming_language)">Haskell</a>
+and similar non-procedural languages have not much chance of being widely
+adopted. And this is not because of some perceived learning difficulties, but
+simply owning to the unfortunate fact, that I/O functionality necessarily looks
+very cumbersome when implemented in them. It&#8217;s not like procedural languages do
+it so much better, simply correct I/O as it is already presents so many
+challenges, that fitting it into additional language mandated abstract form does
+it no good service as all.</p>
+<div class="section" id="message-passing-interface">
+<span id="mp-dev"></span><h2>Message passing interface<a class="headerlink" href="#message-passing-interface" title="Permalink to this headline">¶</a></h2>
+<p>The most basic and ubiquitous I/O communication pattern is a message passing
+interface. Messages are nothing more than finite sequences of bits exchanged
+between local and remote parties. Even disregarding computers outright, we
+may notice that oral or written conversations between humans still can be
+described in terms of message passing. Nature knows some other ways to
+communicate (chemical trails come to mind) but those have not made it into
+computer engineering just yet.</p>
+<p>Given a need to engage in information exchange with a remote party we can do
+three basic things:</p>
+<ol class="arabic simple">
+<li>Establish the identity of the remote party using some form of address
+literal.</li>
+<li>Prepare a message by putting some bits together and send it over.</li>
+<li>Designate an area of local memory to serve as mailbox and check it every now
+and then to see if something (remotely originated message) had dropped in.</li>
+</ol>
+<p>Surprising, as it may be, there&#8217;s not much else to do, communication wise.</p>
+<p>Atop of the basic pattern some convenient extensions are always possible.</p>
+<dl class="docutils">
+<dt><strong>Blocking wait</strong></dt>
+<dd>When waiting to receive a message, application can ask an operating system
+to poll the mailbox on its behalf and conveniently do nothing in the meantime.
+This is, of course, mostly useful on time-sharing operating systems.</dd>
+<dt><strong>Request/reply</strong></dt>
+<dd>Sometimes, the remote party will do something only if asked to. Single
+interface entry point can be used by application to format a request message,
+send it, wait for remote party to reply and return the reply as a result of
+seemingly single operation. Ordinary file access on most operating systems
+works roughly like this (it&#8217;s worth remembering how complex modern storage
+devices actually are).</dd>
+<dt><strong>Streaming</strong></dt>
+<dd>Sometimes, I/O interaction is described in terms of continuous data stream.
+However, streaming normally means rearranging (cutting and pasting) messages
+to form other messages out of them. As some editing of messages in always
+necessary, there appears to be no need to give streaming pattern any special
+distinction.</dd>
+</dl>
+</div>
+<div class="section" id="remote-memory-interface">
+<span id="rm-dev"></span><h2>Remote memory interface<a class="headerlink" href="#remote-memory-interface" title="Permalink to this headline">¶</a></h2>
+<p>Some remote parties happen to possess considerable amount of memory, taken in
+most broad meaning of the word. It can either be semiconductor memory, similar
+to local one, or magnetic medium, or even an optical imaging device. At any rate
+it is very convenient to make this remote memory available to an application as
+if it were a local one. While impossible in general (moving information around
+requires time and effort) such memory mapping can be achieved in standardised,
+application independent way, whereupon actual message passing can be delegated
+to operating system or even hardware (as it is done on
+<a class="reference external" href="http://en.wikipedia.org/wiki/Non-Uniform_Memory_Access">NUMA platforms</a>).</p>
+<p>Normally, remote memory access is an additional capability of otherwise usual
+message passing interface. Unless a lot of hardware magic is employed, operation
+of the remotely shared memory requires explicit synchronisation of interested
+parties by means of predefined message exchange protocols. Therefore, when
+mentioning remote memory interfaces, it is implied that those interfaces can be
+operated like a pure message passing ones.</p>
+<p><a class="reference external" href="http://github.com/oakad/oakad.github.com/issues#issue/2">General comments, corrections, objections?</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Brief discussion of input/output interface traits</a><ul>
+<li><a class="reference internal" href="#message-passing-interface">Message passing interface</a></li>
+<li><a class="reference internal" href="#remote-memory-interface">Remote memory interface</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="syslang.html"
+                        title="previous chapter">Language for system programing, or C is not going to stay here forever</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="jx.html"
+                        title="next chapter">Windowing system of the future in the mirror of the present</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/iotraits.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="jx.html" title="Windowing system of the future in the mirror of the present"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="syslang.html" title="Language for system programing, or C is not going to stay here forever"
+             >previous</a> |</li>
+        <li><a href="index.html">Alex Dubov&#39;s assorted articles</a> &raquo;</li>
+          <li><a href="index-ucpf.html" >Useful components for the prosperous future</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; <a href="copyright.html">Copyright</a> 2010, Alex Dubov &lt;oakad@yahoo.com&gt;.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.1.
+    </div>
+  </body>
+</html>
