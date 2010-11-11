@@ -12,6 +12,7 @@ a good sense of priorities and features required.
 .. toctree::
    :maxdepth: 1
 
-   Language for system programing <syslang.rst>
    Brief discussion of I/O interface traits <iotraits.rst>
+   Access rights management: slower means better <sarm.rst>
+   Versatile resource sharing system <vrss.rst>
    Windowing system of the future <jx.rst>

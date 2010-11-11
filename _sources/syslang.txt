@@ -53,7 +53,7 @@ inference, patterns (or templates), name spaces - all these allow development
 of most complicated programs without the need to rely on any complicated and
 non-obvious run-time requirements. Partial application and closures are also
 a necessity, to the extent possible (the limitations are those imposed by
-stack based activation record mechanism, as apparent in C/C++ implementation
+stack based activation record mechanism, as apparent in C++ implementation
 of this feature).
 
 Additional commonly neglected aspect is the ability of the language
@@ -82,6 +82,73 @@ properties can be set together as a functional class applicable to the
 chair-like values (and many other things), thus providing a useful alternative
 to C++ style objects.
 
+On limited usefulness of exceptions
+===================================
+
+Venerable and useful ``goto`` statement (unconditional transfer of control) had
+long been seen as an embodiment of evil of some sort, which must be eradicated
+in any cost. Curiously enough, in modern programing languages alternatives
+offered often end up being similar in their features to the
+`comefrom <http://en.wikipedia.org/wiki/Comefrom>`_ construct, which is even
+worse. One notable example of such misuse are labelled statements in Java,
+whereupon the label is specified at the beginning of the block, while control
+is most often transferred past its end. Exceptions happen to suffer a similar
+ill fate.
+
+It must be noted, that exceptions come in two rather distinct varieties.
+Borrowing the Java terminology, they can be either checked or unchecked, the
+difference being that any function desiring to throw checked exceptions must
+explicitly list them in its declaration. No such restriction applies to
+unchecked exceptions, which can simply pop-up from elsewhere at any time.
+
+It is immediately clear, that checked exceptions are not true exceptions at
+all, so to say. Rather they can be treated as alternative return types for
+a given function. Discriminated unions were long neglected by mainstream
+programing languages, yet checked exceptions essentially result in function
+returning such an union of its normal return type with some additional exception
+types listed in the declaration. There appears to be no saving in amount of
+typing or clarity of the resulting code when using checked exceptions versus
+Haskell-style Maybe return types or plain C pointers employing a similar
+adaptation (pointers can seldom access their full numeric range worth of
+storage, so an arithmetic sub-range can be set within possible pointer values
+to indicate various cases of failure).
+
+Unchecked exceptions present a more interesting problem, however. They can be
+emitted by functions which don't have a user accessible return value at all,
+object constructors and destructors of C++ being a prominent example. They also
+serve to provide a variety of non-local return from a throwing function,
+delivering their value somewhere deep in the call stack, instead of a simple
+return to the caller. To better assess a usefulness of these features to a
+system level language, a short enumeration may come handy:
+
+#. Throwing exceptions from constructors requires considerable caution in
+   non-garbage collected languages, often resulting in memory and resource
+   leaks. Considerable local error checking is almost inevitable in non-trivial
+   cases to the extent, that its easier to just normally finish construction of
+   semantically invalid object with an additional post-construction check for
+   integrity (very common pattern in C++ programs).
+#. Throwing exceptions from destructors appears to be an exercise in futility.
+   Fortunately, its almost never done or needed.
+#. Non-local error handling, or throwing exceptions from arbitrary places in the
+   program is advocated on the basis that exceptional conditions are not
+   supposed to be recovered from. Yet, high reliability software systems do
+   commonly have an ability to recover from almost all varieties of errors
+   they may encounter, short of physical hardware damage. Under the assumption,
+   that errors are not too rare and must be recovered from as quickly as
+   possible, local error handling (C style) appears to be more useful approach.
+
+Nevertheless, in past years, exceptions became a standard programing construct.
+It seems beneficial to implement them in Chi as well, albeit in such a fashion
+as to afford easy switching to exception-free code. The most obvious way to
+do so is to abolish the need for customary ``try`` - ``catch`` construct.
+Instead, compiler will implicitely promote any scope immediately followed by
+one or more ``catch`` statements to become exception catching. In case,
+compiler is instructed to disable exceptions, such ``catch`` statements can
+turn into noops, optionally rising compilation warnings or errors.
+
+Chi programing style guideline is not expected to emphasize the of exceptions
+for error recovery (unlike many other languages).
+
 *************************************
 Type system and basic data structures
 *************************************
@@ -99,83 +166,55 @@ structures, all customisable with type patterns:
    numeric types, apart from other useful things.
 #. ``Tuple`` (or structure) defines a value composed of several differently
    typed values, possibly named. It also affects name resolution rules in
-   functions taking it as argument.
+   functions taking it as argument. Special forms of tuples are nameless
+   tuples, which bind their member names directly into an enclosing scope and
+   extensible tuples, which can act as extentions to other values.
 #. ``Variant`` (or discriminating union) represents a value which can be of
    one of the data types defined in the variant's declaration. Unlike C unions,
    it can not be assigned as one data type, then taken as another. Rather, it
    "remembers" the type it was assigned to last time.
 
-It is expected, that these structures, no matter how intricately interposed,
-should have a zero size if no actual byte values are present in their
-definitions, serving only for compile-time metaprograming purposes.
+Additional important data type present at the Chi's basic abstraction layer
+is functional closure, which doubles as a general function type.
 
-Apart from basic data structures some additional type declaration constructs
-will be necessary, to encompass the source level abstractions. Thus, just like
-in C++, pointers and safe pointers (references) constitute value types with
-very specific traits, dissimilar to their underlying numeric value types.
+Functional classes
+==================
 
-Same applies to functional closures, which normally require relatively complex
-data structures at their implementation level, as well as special compiler
-treatment, yet appear as simple values to the application programmer.
+Any type can be made conformant with one or more functional classes, which
+define a set of operations, applicable to the given class. This is similar
+to the Haskell classes or Java interfaces.
 
-Type aliases are of "strong" nature - data types having identical structure, but
-different names are considered completely different. This also implies that
-array and function value types are not identical to pointers, rather they are
-close in nature to C++ array<> and function<> templates.
+In particular, pointers and references are really types which can be passed
+as arguments to appropriate dereferencing operator. For couple of integer types
+this dereferencing operator is defined by the compiler built-in instances (to
+the tune of generic ``addressof`` operator).
 
-All values have, by default, copy and literal constructors whose syntax is
-different from normal function definition. The idea is to only allow
-constructors, which can not fail by their definition, while still allowing
-the programmer to automate, somewhat, creation and copying of values.
-Enumerations, as well as any more general restricted value assignment, should
-be possible to implement through this mechanism.
+Type attributes
+===============
 
-Destructors, which are also customarily assumed to never fail are implemented as
-aptly named function variable within a tuple (with a special built in behaviour
-for arrays of tuples). It should be possible to infer through static analysis if
-a particular variable has destructor functions and emit a code to call
-destructors in required order where needed (while this may border on "magic"
-as defined above, it is of relatively innocent kind).
+Any type can have a set of associated attributes, controlling code generation
+and run-time behavior of the corresponding value. Same type with distinct
+attributes can be seen as belonging to the same family and Chi should provide
+means to automate promotion and conversion of such related types.
 
-**********************
-Namespaces and scoping
-**********************
+Of attributes, those appear to be definitely necessary:
+#. ``any`` (stripping of all attributes for use in type patern).
+#. ``const`` (read-only values).
+#. ``volatile`` (restricted optimization).
+#. ``packed`` (dense storage utilization).
+#. ``atomic`` (similarly to Java ``synchronized``, extends type with
+synchronisztion constructs or generates appropriate code for it).
 
-To control the visibility of symbol names in large programs, Chi borrows the
-notion of namespaces from C++. Any language statement can access symbols
-defined in any of the hierarchically enclosing namespaces. Symbols defined in
-namespaces not enclosed in the immediate namespace hierarchy must be referenced
-by full namespace path (fully qualified name), with shortcut notation for
-local aliasing provided. Namespaces can also possess qualifiers.
 
-**Default**
-  By default, any namespace is accessible by its full path on the source level.
-  However, none of the symbols defined in such namespaces is exported on the
-  binary level.
+Type calculations
+=================
 
-**Global**
-  Dynamic libraries will put at least some of their symbols into the ``global``
-  namespaces. Sufficient information will be put into generated binaries to
-  make those symbols accessible through dynamic loading.
+Chi compiler will provide both the ability to synthesize arbitrary types out
+of type patterns by evaluating special programs, taking type names as arguments.
+Results of the above evaluations will represent composite types with specific
+storage requirements, which can be instantiated and used by user code.
 
-**Hidden**
-  Hidden namespaces are only accessible from immediately enclosing ones. They
-  are useful to clearly isolate user invisible implementation from interface
-  definitions.
 
-Each stand-alone source file (compilation unit) has a local unnamed, hidden
-namespace defined by default. While symbols in it are not accessible to user
-code, it still can be used for ``const`` statements evaluated at compile time,
-which can place their results into the visible, named namespaces. Some
-implementations may choose to make this namespace visible and even put it into
-some hierarchy by default - such approach is handy in interactive JIT
-compilation oriented environments.
-
-Besides this property, compilation units do not aim to impose any additional
-logical structure on the program. Namespaces can span multiple source files
-in arbitrary fashion, while still remaining a singular entities. Order of
-symbol declarations within the namespace is irrelevant - all symbols within
-the namespace are assumed to exist simultaneously.
 
 *******************
 Compilation process
@@ -251,10 +290,4 @@ file search paths. Each compilation unit will be processed into an
 incrementally linked binary, possibly capable of being immediately loaded into
 a JIT based application or further linked with other such binaries by means
 of standard C linker.
-
-******************
-Syntactic features
-******************
-
-To be written together with the prototype code.
 

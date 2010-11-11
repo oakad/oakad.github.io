@@ -23,10 +23,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="copyright" title="Copyright" href="copyright.html" />
-    <link rel="top" title="Alex Dubov&#39;s assorted articles" href="index.html" />
-    <link rel="up" title="Useful components for the prosperous future" href="index-ucpf.html" />
-    <link rel="next" title="Brief discussion of input/output interface traits" href="iotraits.html" />
-    <link rel="prev" title="Useful components for the prosperous future" href="index-ucpf.html" /> 
+    <link rel="top" title="Alex Dubov&#39;s assorted articles" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,14 +32,7 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="iotraits.html" title="Brief discussion of input/output interface traits"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="index-ucpf.html" title="Useful components for the prosperous future"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Alex Dubov&#39;s assorted articles</a> &raquo;</li>
-          <li><a href="index-ucpf.html" accesskey="U">Useful components for the prosperous future</a> &raquo;</li> 
+        <li><a href="index.html">Alex Dubov&#39;s assorted articles</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -96,7 +86,7 @@ inference, patterns (or templates), name spaces - all these allow development
 of most complicated programs without the need to rely on any complicated and
 non-obvious run-time requirements. Partial application and closures are also
 a necessity, to the extent possible (the limitations are those imposed by
-stack based activation record mechanism, as apparent in C/C++ implementation
+stack based activation record mechanism, as apparent in C++ implementation
 of this feature).</p>
 <p>Additional commonly neglected aspect is the ability of the language
 infrastructure to control information transfer between development and run-time
@@ -121,6 +111,68 @@ screwed down to the floor and weights only couple of kilogrammes. Those listed
 properties can be set together as a functional class applicable to the
 chair-like values (and many other things), thus providing a useful alternative
 to C++ style objects.</p>
+<div class="section" id="on-limited-usefulness-of-exceptions">
+<h3>On limited usefulness of exceptions<a class="headerlink" href="#on-limited-usefulness-of-exceptions" title="Permalink to this headline">¶</a></h3>
+<p>Venerable and useful <tt class="docutils literal"><span class="pre">goto</span></tt> statement (unconditional transfer of control) had
+long been seen as an embodiment of evil of some sort, which must be eradicated
+in any cost. Curiously enough, in modern programing languages alternatives
+offered often end up being similar in their features to the
+<a class="reference external" href="http://en.wikipedia.org/wiki/Comefrom">comefrom</a> construct, which is even
+worse. One notable example of such misuse are labelled statements in Java,
+whereupon the label is specified at the beginning of the block, while control
+is most often transferred past its end. Exceptions happen to suffer a similar
+ill fate.</p>
+<p>It must be noted, that exceptions come in two rather distinct varieties.
+Borrowing the Java terminology, they can be either checked or unchecked, the
+difference being that any function desiring to throw checked exceptions must
+explicitly list them in its declaration. No such restriction applies to
+unchecked exceptions, which can simply pop-up from elsewhere at any time.</p>
+<p>It is immediately clear, that checked exceptions are not true exceptions at
+all, so to say. Rather they can be treated as alternative return types for
+a given function. Discriminated unions were long neglected by mainstream
+programing languages, yet checked exceptions essentially result in function
+returning such an union of its normal return type with some additional exception
+types listed in the declaration. There appears to be no saving in amount of
+typing or clarity of the resulting code when using checked exceptions versus
+Haskell-style Maybe return types or plain C pointers employing a similar
+adaptation (pointers can seldom access their full numeric range worth of
+storage, so an arithmetic sub-range can be set within possible pointer values
+to indicate various cases of failure).</p>
+<p>Unchecked exceptions present a more interesting problem, however. They can be
+emitted by functions which don&#8217;t have a user accessible return value at all,
+object constructors and destructors of C++ being a prominent example. They also
+serve to provide a variety of non-local return from a throwing function,
+delivering their value somewhere deep in the call stack, instead of a simple
+return to the caller. To better assess a usefulness of these features to a
+system level language, a short enumeration may come handy:</p>
+<ol class="arabic simple">
+<li>Throwing exceptions from constructors requires considerable caution in
+non-garbage collected languages, often resulting in memory and resource
+leaks. Considerable local error checking is almost inevitable in non-trivial
+cases to the extent, that its easier to just normally finish construction of
+semantically invalid object with an additional post-construction check for
+integrity (very common pattern in C++ programs).</li>
+<li>Throwing exceptions from destructors appears to be an exercise in futility.
+Fortunately, its almost never done or needed.</li>
+<li>Non-local error handling, or throwing exceptions from arbitrary places in the
+program is advocated on the basis that exceptional conditions are not
+supposed to be recovered from. Yet, high reliability software systems do
+commonly have an ability to recover from almost all varieties of errors
+they may encounter, short of physical hardware damage. Under the assumption,
+that errors are not too rare and must be recovered from as quickly as
+possible, local error handling (C style) appears to be more useful approach.</li>
+</ol>
+<p>Nevertheless, in past years, exceptions became a standard programing construct.
+It seems beneficial to implement them in Chi as well, albeit in such a fashion
+as to afford easy switching to exception-free code. The most obvious way to
+do so is to abolish the need for customary <tt class="docutils literal"><span class="pre">try</span></tt> - <tt class="docutils literal"><span class="pre">catch</span></tt> construct.
+Instead, compiler will implicitely promote any scope immediately followed by
+one or more <tt class="docutils literal"><span class="pre">catch</span></tt> statements to become exception catching. In case,
+compiler is instructed to disable exceptions, such <tt class="docutils literal"><span class="pre">catch</span></tt> statements can
+turn into noops, optionally rising compilation warnings or errors.</p>
+<p>Chi programing style guideline is not expected to emphasize the of exceptions
+for error recovery (unlike many other languages).</p>
+</div>
 </div>
 <div class="section" id="type-system-and-basic-data-structures">
 <h2>Type system and basic data structures<a class="headerlink" href="#type-system-and-basic-data-structures" title="Permalink to this headline">¶</a></h2>
@@ -136,73 +188,47 @@ physical storage. Short array of bytes can be used to represent all the basic
 numeric types, apart from other useful things.</li>
 <li><tt class="docutils literal"><span class="pre">Tuple</span></tt> (or structure) defines a value composed of several differently
 typed values, possibly named. It also affects name resolution rules in
-functions taking it as argument.</li>
+functions taking it as argument. Special forms of tuples are nameless
+tuples, which bind their member names directly into an enclosing scope and
+extensible tuples, which can act as extentions to other values.</li>
 <li><tt class="docutils literal"><span class="pre">Variant</span></tt> (or discriminating union) represents a value which can be of
 one of the data types defined in the variant&#8217;s declaration. Unlike C unions,
 it can not be assigned as one data type, then taken as another. Rather, it
 &#8220;remembers&#8221; the type it was assigned to last time.</li>
 </ol>
-<p>It is expected, that these structures, no matter how intricately interposed,
-should have a zero size if no actual byte values are present in their
-definitions, serving only for compile-time metaprograming purposes.</p>
-<p>Apart from basic data structures some additional type declaration constructs
-will be necessary, to encompass the source level abstractions. Thus, just like
-in C++, pointers and safe pointers (references) constitute value types with
-very specific traits, dissimilar to their underlying numeric value types.</p>
-<p>Same applies to functional closures, which normally require relatively complex
-data structures at their implementation level, as well as special compiler
-treatment, yet appear as simple values to the application programmer.</p>
-<p>Type aliases are of &#8220;strong&#8221; nature - data types having identical structure, but
-different names are considered completely different. This also implies that
-array and function value types are not identical to pointers, rather they are
-close in nature to C++ array&lt;&gt; and function&lt;&gt; templates.</p>
-<p>All values have, by default, copy and literal constructors whose syntax is
-different from normal function definition. The idea is to only allow
-constructors, which can not fail by their definition, while still allowing
-the programmer to automate, somewhat, creation and copying of values.
-Enumerations, as well as any more general restricted value assignment, should
-be possible to implement through this mechanism.</p>
-<p>Destructors, which are also customarily assumed to never fail are implemented as
-aptly named function variable within a tuple (with a special built in behaviour
-for arrays of tuples). It should be possible to infer through static analysis if
-a particular variable has destructor functions and emit a code to call
-destructors in required order where needed (while this may border on &#8220;magic&#8221;
-as defined above, it is of relatively innocent kind).</p>
+<p>Additional important data type present at the Chi&#8217;s basic abstraction layer
+is functional closure, which doubles as a general function type.</p>
+<div class="section" id="functional-classes">
+<h3>Functional classes<a class="headerlink" href="#functional-classes" title="Permalink to this headline">¶</a></h3>
+<p>Any type can be made conformant with one or more functional classes, which
+define a set of operations, applicable to the given class. This is similar
+to the Haskell classes or Java interfaces.</p>
+<p>In particular, pointers and references are really types which can be passed
+as arguments to appropriate dereferencing operator. For couple of integer types
+this dereferencing operator is defined by the compiler built-in instances (to
+the tune of generic <tt class="docutils literal"><span class="pre">addressof</span></tt> operator).</p>
 </div>
-<div class="section" id="namespaces-and-scoping">
-<h2>Namespaces and scoping<a class="headerlink" href="#namespaces-and-scoping" title="Permalink to this headline">¶</a></h2>
-<p>To control the visibility of symbol names in large programs, Chi borrows the
-notion of namespaces from C++. Any language statement can access symbols
-defined in any of the hierarchically enclosing namespaces. Symbols defined in
-namespaces not enclosed in the immediate namespace hierarchy must be referenced
-by full namespace path (fully qualified name), with shortcut notation for
-local aliasing provided. Namespaces can also possess qualifiers.</p>
-<dl class="docutils">
-<dt><strong>Default</strong></dt>
-<dd>By default, any namespace is accessible by its full path on the source level.
-However, none of the symbols defined in such namespaces is exported on the
-binary level.</dd>
-<dt><strong>Global</strong></dt>
-<dd>Dynamic libraries will put at least some of their symbols into the <tt class="docutils literal"><span class="pre">global</span></tt>
-namespaces. Sufficient information will be put into generated binaries to
-make those symbols accessible through dynamic loading.</dd>
-<dt><strong>Hidden</strong></dt>
-<dd>Hidden namespaces are only accessible from immediately enclosing ones. They
-are useful to clearly isolate user invisible implementation from interface
-definitions.</dd>
-</dl>
-<p>Each stand-alone source file (compilation unit) has a local unnamed, hidden
-namespace defined by default. While symbols in it are not accessible to user
-code, it still can be used for <tt class="docutils literal"><span class="pre">const</span></tt> statements evaluated at compile time,
-which can place their results into the visible, named namespaces. Some
-implementations may choose to make this namespace visible and even put it into
-some hierarchy by default - such approach is handy in interactive JIT
-compilation oriented environments.</p>
-<p>Besides this property, compilation units do not aim to impose any additional
-logical structure on the program. Namespaces can span multiple source files
-in arbitrary fashion, while still remaining a singular entities. Order of
-symbol declarations within the namespace is irrelevant - all symbols within
-the namespace are assumed to exist simultaneously.</p>
+<div class="section" id="type-attributes">
+<h3>Type attributes<a class="headerlink" href="#type-attributes" title="Permalink to this headline">¶</a></h3>
+<p>Any type can have a set of associated attributes, controlling code generation
+and run-time behavior of the corresponding value. Same type with distinct
+attributes can be seen as belonging to the same family and Chi should provide
+means to automate promotion and conversion of such related types.</p>
+<p>Of attributes, those appear to be definitely necessary:
+#. <tt class="docutils literal"><span class="pre">any</span></tt> (stripping of all attributes for use in type patern).
+#. <tt class="docutils literal"><span class="pre">const</span></tt> (read-only values).
+#. <tt class="docutils literal"><span class="pre">volatile</span></tt> (restricted optimization).
+#. <tt class="docutils literal"><span class="pre">packed</span></tt> (dense storage utilization).
+#. <tt class="docutils literal"><span class="pre">atomic</span></tt> (similarly to Java <tt class="docutils literal"><span class="pre">synchronized</span></tt>, extends type with
+synchronisztion constructs or generates appropriate code for it).</p>
+</div>
+<div class="section" id="type-calculations">
+<h3>Type calculations<a class="headerlink" href="#type-calculations" title="Permalink to this headline">¶</a></h3>
+<p>Chi compiler will provide both the ability to synthesize arbitrary types out
+of type patterns by evaluating special programs, taking type names as arguments.
+Results of the above evaluations will represent composite types with specific
+storage requirements, which can be instantiated and used by user code.</p>
+</div>
 </div>
 <div class="section" id="compilation-process">
 <h2>Compilation process<a class="headerlink" href="#compilation-process" title="Permalink to this headline">¶</a></h2>
@@ -273,10 +299,6 @@ incrementally linked binary, possibly capable of being immediately loaded into
 a JIT based application or further linked with other such binaries by means
 of standard C linker.</p>
 </div>
-<div class="section" id="syntactic-features">
-<h2>Syntactic features<a class="headerlink" href="#syntactic-features" title="Permalink to this headline">¶</a></h2>
-<p>To be written together with the prototype code.</p>
-</div>
 </div>
 
 
@@ -288,21 +310,21 @@ of standard C linker.</p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Language for system programing, or C is not going to stay here forever</a><ul>
-<li><a class="reference internal" href="#what-is-really-needed-from-the-system-programing-language">What is really needed from the system programing language?</a></li>
-<li><a class="reference internal" href="#type-system-and-basic-data-structures">Type system and basic data structures</a></li>
-<li><a class="reference internal" href="#namespaces-and-scoping">Namespaces and scoping</a></li>
+<li><a class="reference internal" href="#what-is-really-needed-from-the-system-programing-language">What is really needed from the system programing language?</a><ul>
+<li><a class="reference internal" href="#on-limited-usefulness-of-exceptions">On limited usefulness of exceptions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#type-system-and-basic-data-structures">Type system and basic data structures</a><ul>
+<li><a class="reference internal" href="#functional-classes">Functional classes</a></li>
+<li><a class="reference internal" href="#type-attributes">Type attributes</a></li>
+<li><a class="reference internal" href="#type-calculations">Type calculations</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#compilation-process">Compilation process</a></li>
-<li><a class="reference internal" href="#syntactic-features">Syntactic features</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="index-ucpf.html"
-                        title="previous chapter">Useful components for the prosperous future</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="iotraits.html"
-                        title="next chapter">Brief discussion of input/output interface traits</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/syslang.txt"
@@ -331,14 +353,7 @@ of standard C linker.</p>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="iotraits.html" title="Brief discussion of input/output interface traits"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="index-ucpf.html" title="Useful components for the prosperous future"
-             >previous</a> |</li>
-        <li><a href="index.html">Alex Dubov&#39;s assorted articles</a> &raquo;</li>
-          <li><a href="index-ucpf.html" >Useful components for the prosperous future</a> &raquo;</li> 
+        <li><a href="index.html">Alex Dubov&#39;s assorted articles</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
