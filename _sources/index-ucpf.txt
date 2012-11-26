@@ -16,3 +16,4 @@ a good sense of priorities and features required.
    Access rights management: slower means better <sarm.rst>
    Versatile resource sharing system <vrss.rst>
    Windowing system of the future <jx.rst>
+   Language for system programing <syslang.rst>

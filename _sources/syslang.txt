@@ -4,6 +4,61 @@ Language for system programing, or C is not going to stay here forever
 
 *This article is still being written.*
 
+The new language, being described here, is to be called Chi.
+
+*************************
+Basic syntax and concepts
+*************************
+
+Chi makes extensive use of type patterns. In fact, every type is a pattern,
+analogous to C++ template. Otherwise than this, the language is strictly
+procedural, and has no special provisions for objects and related concepts. The
+underlaying machine model is expected to closely match the physical machine
+(C style) and rely on OS provided libraries to the extent possible.
+
+Extended "Hello World"
+======================
+
+A slightly more elaborate version of "Hello World" application can demonstrate
+some abilities of the Chi programming language.
+
+.. code-block:: none
+
+   // Declaration of the C fprintf like function
+   [ (file* fd, (type(T) v | type(file* fd -> void) f) ...) -> int ]
+   fprintf;
+
+   [ (int argc, char*[...] argv) -> int ] main = {
+     for (int pos = 0; pos <  argc; pos += 1)
+       fprintf(stdout, "arg ", argc, ": ", argv(pos), "\n");
+
+     return 0;
+   }
+
+
+Basics
+======
+
+Statement syntax is generally inherited from C:
+
+.. code-block:: antlr
+
+   statement : ( typedecl | expression ) ';' ;
+
+
+Type decalarations
+==================
+
+.. code-block:: antlr
+
+   typedecl : typename? '[' typedef ']' varlist? ;
+
+   varlist : vardef ( ',' vardef )* ;
+
+   vardef : varname ( '[' varattr+ ']' )? ;
+
+
+
 It so happens, that both in development of new programing languages, as well
 as in development of new operating systems, the issue of IO and interaction
 with machine hardware in general is often neglected. Fancy abstractions,

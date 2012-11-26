@@ -153,5 +153,5 @@ The failure which is X11
 
 Even in the days of first graphical user interfaces, some people tried to
 perceive the future. After couple of not so successful attempts, X11 was
-created, to become first "naively" networked graphical windowing system.
+created, to become first "natively" networked graphical windowing system.
 
