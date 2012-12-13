@@ -1,0 +1,73 @@
+\documentclass[
+ 12pt,
+ style = sufelements,
+ defaultfont = standard,
+ documentstructure = book,
+ headerstyle = authortitlecenter,
+ crop = true
+]{suftesi}
+\usepackage{xltxtra}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[style = italian]{csquotes}
+\usepackage{verse}
+\usepackage[xetex]{hyperref}
+
+\setdefaultlanguage{russian}
+\chapnumfont{\fontspec[Numbers=OldStyle]{Minion Pro}}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Minion Pro}
+\setsansfont{Myriad Pro}
+
+\hypersetup{
+ final = true,
+ breaklinks = true,
+ colorlinks = true,
+ linkcolor = black,
+ urlcolor = black,
+ pdftitle = Записки к предыстории Мировой Войны 1914 - 1918 гг,
+ pdfauthor = Д. А. Шемякин,
+ unicode = true
+}
+
+\title{Записки к предыстории Мировой Войны 1914--1918 гг}
+\author{Д. А. Шемякин}
+\date{}
+
+\newlength{\drop}
+\newcommand*{\titleM}{
+\begingroup
+\drop = 0.08\textheight
+\centering
+\vspace*{\drop}
+{\Huge\bfseries Записки}\\[.5\baselineskip]
+{\large\scshape к предыстории Мировой Войны}\\[.5\baselineskip]
+{\large\scshape 1914--1918 гг.}\\[\baselineskip]
+{\Large\scshape Д. А. Шемякин}\par
+\vfill
+{\scshape\href{http://gilliland.livejournal.com/}{Сборник оригинальных публикаций Д. А. Шемякина}}\par
+\vspace*{2\drop}
+\endgroup
+}
+
+\begin{document}
+\pagestyle{empty}
+\titleM
+\clearpage
+\chapter{}
+\input{ch-20121204-01}
+\chapter{}
+\input{ch-20121204-02}
+\chapter{}
+\input{ch-20121204-03}
+\chapter{}
+\input{ch-20121204-04}
+\chapter{}
+\input{ch-20121204-05}
+\chapter{}
+\input{ch-20121205}
+\chapter{}
+\input{ch-20121206}
+\chapter{}
+\input{ch-20121212}
+\end{document}
