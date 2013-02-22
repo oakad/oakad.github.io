@@ -56,17 +56,43 @@
             
   <div class="section" id="access-rights-management-slower-means-better">
 <h1>Access rights management: slower means better<a class="headerlink" href="#access-rights-management-slower-means-better" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div>Proper management of resource access rights in computer systems is one of the
+<p>Proper management of resource access rights in computer systems is one of the
 most complicated and, one might say, convoluted problems of computer system
 design. Even more so, access rights are too often managed by means of badly
 designed protocols, which are prone to abuse. However, proper design of
 rights management protocol is impossible without an appropriate analysis of
 protocol entities involved. In fact, root causes of security failures
 experienced by rights management systems can easily be attributed to
-incorrect identification of foundational entities of those systems.</div></blockquote>
+incorrect identification of foundational entities of those systems.</p>
+<p>There exist a considerable body of publications and software dedicated to
+the issues of access rights and identity management. Unfortunately, many of
+these works suffer from over formalization and other common &#8220;design by
+committee&#8221; drawbacks, making them very difficult to implement and use
+properly. Invariably, implementational difficulties translate into future
+security failures. Thus, design of a quality access right management system
+should not only be formally correct and featureful, but must also pay a close
+attention to &#8220;mental ergonomics&#8221; of its developers and end-users.</p>
 <div class="section" id="basic-traits-of-rights-management-systems">
 <h2>Basic traits of rights management systems<a class="headerlink" href="#basic-traits-of-rights-management-systems" title="Permalink to this headline">¶</a></h2>
+<p>Prior to management any sort of &#8220;rights&#8221;, one shall establish the nature of
+objects and subjects, concept of &#8220;rights&#8221; applies to. In regard to computer
+system, identifying the object is rather easy.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Just like with any system, access to a computer system always involves
+observation or modification (control) of its state variables. Following
+the accepted terminology (due to R. E. Kalman), we can formulate the
+following rule. For every access channel established with the system, two
+non-exhaustive, overlapping sets of system variables will be available: set
+of controllable system state variables and (usually larger) set of observable
+ones. These sets together form the &#8220;access rights set&#8221; (ARS) of the channel.</p>
+</div>
+<p>The issue of subjects, accessing the computer system is way more complicated.
+First, it is clear, that computer system can only respond to an information,
+emerging from a &#8220;near end&#8221; of an access channel. It has no material way to
+&#8220;perceive&#8221; what&#8217;s going on on the &#8220;far end&#8221; of the mentioned access channel and
+thus must rely on &#8220;identity proofs&#8221; of various strength to establish the
+appropriate ARS.</p>
 </div>
 </div>
 

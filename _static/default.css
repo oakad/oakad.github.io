@@ -191,6 +191,7 @@ div.admonition ul, div.admonition ol {
 }
 
 div.note {
+    text-align: justify;
     background-color: #eee;
     border: 1px solid #ccc;
 }
