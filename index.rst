@@ -11,3 +11,4 @@ and age, but definitely worth trying.
 
    General observations and opinions stated <index-gen.rst>
    Useful components for the prosperous future <index-ucpf.rst>
+   HTML musings <index-html.html>
