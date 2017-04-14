@@ -1,0 +1,2380 @@
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.12.12)  13 DEC 2012 20:50
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Записки.tex
+(./Записки.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
+hiopic, arabic, farsi, pinyin, croatian, bulgarian, russian, ukrainian, czech, 
+slovak, danish, dutch, ukenglish, usenglishmax, finnish, basque, french, german
+-x-2012-05-30, ngerman-x-2012-05-30, german, ngerman, swissgerman, ancientgreek
+, ibycus, greek, monogreek, hungarian, assamese, bengali, gujarati, hindi, kann
+ada, malayalam, marathi, oriya, panjabi, tamil, telugu, sanskrit, italian, lati
+n, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, afrikaans, ar
+menian, coptic, esperanto, estonian, friulan, icelandic, indonesian, interlingu
+a, irish, kurmanji, romanian, romansh, serbianc, serbian, slovenian, turkish, u
+ppersorbian, welsh, polish, portuguese, catalan, galician, spanish, swedish, tu
+rkmen, loaded.
+(/usr/share/texmf-dist/tex/latex/suftesi/suftesi.cls
+Document Class: suftesi 2012/10/24 v1.2 A class for typesetting theses, books a
+nd articles
+(/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks14
+\XKV@tempa@toks=\toks15
+\XKV@depth=\count80
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+
+(/usr/share/texmf-dist/tex/generic/xkeyval/keyval.tex)))
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count81
+\c@chapter=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count90
+\Gm@cntv=\count91
+\c@Gm@tempcnt=\count92
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks16
+)
+(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\enitkv@toks@=\toks17
+\labelindent=\skip43
+\enit@outerparindent=\dimen111
+\enit@toks=\toks18
+\enit@inbox=\box26
+\enitdp@description=\count93
+)
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen112
+\captionmargin@=\dimen113
+\captionwidth=\dimen114
+\caption@indent=\dimen115
+\caption@parindent=\dimen116
+\caption@hangindent=\dimen117
+)
+\c@ContinuedFloat=\count94
+)
+
+Package xkeyval Warning: key `headerstyle' has been disabled on input line 612.
+
+
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: xetex.def on input line 130.
+
+(/usr/share/texmf-dist/tex/xelatex/xetex-def/xetex.def
+File: xetex.def 2009/11/22 v0.94 LaTeX color/graphics driver for XeTeX (RRM/JK)
+
+))
+(/usr/share/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count95
+\mult@box=\box27
+\multicol@leftmargin=\dimen118
+\c@unbalance=\count96
+\c@collectmore=\count97
+\doublecol@number=\count98
+\multicoltolerance=\count99
+\multicolpretolerance=\count100
+\full@width=\dimen119
+\page@free=\dimen120
+\premulticols=\dimen121
+\postmulticols=\dimen122
+\multicolsep=\skip44
+\multicolbaselineskip=\skip45
+\partial@page=\box28
+\last@line=\box29
+\mult@rightbox=\box30
+\mult@grightbox=\box31
+\mult@gfirstbox=\box32
+\mult@firstbox=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\c@columnbadness=\count101
+\c@finalcolumnbadness=\count102
+\last@try=\dimen123
+\multicolovershoot=\dimen124
+\multicolundershoot=\dimen125
+\mult@nat@firstbox=\box51
+\colbreak@box=\box52
+\multicol@sort@counter=\count103
+)
+(/usr/share/texmf-dist/tex/latex/emptypage/emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
+pages
+)
+(/usr/share/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/crop/crop.sty
+Package: crop 2003/05/20 v1.9 crop marks (mf)
+\stockwidth=\dimen126
+\stockheight=\dimen127
+\CROP@index=\count104
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: xetex.def on input line 91.
+)
+\CROP@offset=\count105
+Package crop Info: Local config file crop.cfg used on input line 605.
+
+(/usr/share/texmf-dist/tex/xelatex/xetexconfig/crop.cfg))
+(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box53
+\beforetitleunit=\skip46
+\aftertitleunit=\skip47
+\ttl@plus=\dimen128
+\ttl@minus=\dimen129
+\ttl@toksa=\toks19
+\titlewidth=\dimen130
+\titlewidthlast=\dimen131
+\titlewidthfirst=\dimen132
+)
+\sectionsep=\skip48
+
+(/usr/share/texmf-dist/tex/latex/fancyhdr/extramarks.sty
+\@temptokenb=\toks20
+)
+(/usr/share/texmf-dist/tex/latex/titlesec/block.tss
+File: block.tss 2011/12/15
+)
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip49
+\f@ncyO@elh=\skip50
+\f@ncyO@erh=\skip51
+\f@ncyO@olh=\skip52
+\f@ncyO@orh=\skip53
+\f@ncyO@elf=\skip54
+\f@ncyO@erf=\skip55
+\f@ncyO@olf=\skip56
+\f@ncyO@orf=\skip57
+)
+(/usr/share/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen133
+)
+\SUF@label@chapter=\skip58
+\SUF@tochang=\skip59
+)
+(/usr/share/texmf-dist/tex/latex/xltxtra/xltxtra.sty
+Package: xltxtra 2010/09/20 v0.5e Improvements for the "XeLaTeX" format
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2012/05/06 v2.2b Advanced font selection for XeLaTeX/LuaLaTeX
+
+
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3names.sty
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3bootstrap.sty
+Package: l3bootstrap 2012/07/16 v3991 L3 Experimental bootstrap code
+)
+Package: l3names 2012/09/24 v4230 L3 Namespace for primitives
+)
+(/usr/share/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count106
+)
+Package: expl3 2012/11/21 v4332 L3 Experimental code bundle wrapper
+
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3basics.sty
+Package: l3basics 2012/11/10 v4306 L3 Basic definitions
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3expan.sty
+Package: l3expan 2012/08/28 v4149 L3 Argument expansion
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3tl.sty
+Package: l3tl 2012/09/28 v4244 L3 Token lists
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3seq.sty
+Package: l3seq 2012/09/09 v4212 L3 Sequences and stacks
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3int.sty
+Package: l3int 2012/09/26 v4237 L3 Integers
+\c_max_int=\count107
+\l_tmpa_int=\count108
+\l_tmpb_int=\count109
+\g_tmpa_int=\count110
+\g_tmpb_int=\count111
+\l_tmpc_int=\count112
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3quark.sty
+Package: l3quark 2012/11/04 v4268 L3 Quarks
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3prg.sty
+Package: l3prg 2012/09/09 v4212 L3 Control structures
+\g__prg_map_int=\count113
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3clist.sty
+Package: l3clist 2012/09/09 v4212 L3 Comma separated lists
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3token.sty
+Package: l3token 2012/11/01 v4251 L3 Experimental token manipulation
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3prop.sty
+Package: l3prop 2012/09/09 v4212 L3 Property lists
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3msg.sty
+Package: l3msg 2012/09/09 v4212 L3 Messages
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3file.sty
+Package: l3file 2012/09/09 v4212 L3 File and I/O operations
+\l__ior_stream_int=\count114
+\l_iow_line_count_int=\count115
+\l__iow_target_count_int=\count116
+\l__iow_current_line_int=\count117
+\l__iow_current_word_int=\count118
+\l__iow_current_indentation_int=\count119
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3skip.sty
+Package: l3skip 2012/11/04 v4260 L3 Dimensions and skips
+\c_zero_dim=\dimen134
+\c_max_dim=\dimen135
+\l_tmpa_dim=\dimen136
+\l_tmpb_dim=\dimen137
+\g_tmpa_dim=\dimen138
+\g_tmpb_dim=\dimen139
+\c_zero_skip=\skip60
+\c_max_skip=\skip61
+\l_tmpa_skip=\skip62
+\l_tmpb_skip=\skip63
+\g_tmpa_skip=\skip64
+\g_tmpb_skip=\skip65
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3keys.sty
+Package: l3keys 2012/11/02 v4256 L3 Experimental key-value interfaces
+\g__keyval_level_int=\count120
+\l_keys_choice_int=\count121
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3fp.sty
+Package: l3fp 2012/11/10 v4305 L3 Floating points
+\c__fp_leading_shift_int=\count122
+\c__fp_middle_shift_int=\count123
+\c__fp_trailing_shift_int=\count124
+\c__fp_big_leading_shift_int=\count125
+\c__fp_big_middle_shift_int=\count126
+\c__fp_big_trailing_shift_int=\count127
+\c__fp_Bigg_leading_shift_int=\count128
+\c__fp_Bigg_middle_shift_int=\count129
+\c__fp_Bigg_trailing_shift_int=\count130
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3box.sty
+Package: l3box 2012/11/04 v4259 L3 Experimental boxes
+\c_empty_box=\box54
+\l_tmpa_box=\box55
+\l_tmpb_box=\box56
+\g_tmpa_box=\box57
+\g_tmpb_box=\box58
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3coffins.sty
+Package: l3coffins 2012/09/09 v4212 L3 Coffin code layer
+\l__coffin_internal_box=\box59
+\l__coffin_internal_dim=\dimen140
+\l__coffin_offset_x_dim=\dimen141
+\l__coffin_offset_y_dim=\dimen142
+\l__coffin_x_dim=\dimen143
+\l__coffin_y_dim=\dimen144
+\l__coffin_x_prime_dim=\dimen145
+\l__coffin_y_prime_dim=\dimen146
+\c_empty_coffin=\box60
+\l__coffin_aligned_coffin=\box61
+\l__coffin_aligned_internal_coffin=\box62
+\l_tmpa_coffin=\box63
+\l_tmpb_coffin=\box64
+\l__coffin_display_coffin=\box65
+\l__coffin_display_coord_coffin=\box66
+\l__coffin_display_pole_coffin=\box67
+\l__coffin_display_offset_dim=\dimen147
+\l__coffin_display_x_dim=\dimen148
+\l__coffin_display_y_dim=\dimen149
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3color.sty
+Package: l3color 2012/08/29 v4156 L3 Experimental color support
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3luatex.sty
+Package: l3luatex 2012/08/03 v4049 L3 Experimental LuaTeX-specific functions
+\g__cctab_allocate_int=\count131
+\g__cctab_stack_int=\count132
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3candidates.sty
+Package: l3candidates 2012/11/09 v4298 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen150
+\l__box_bottom_dim=\dimen151
+\l__box_left_dim=\dimen152
+\l__box_right_dim=\dimen153
+\l__box_top_new_dim=\dimen154
+\l__box_bottom_new_dim=\dimen155
+\l__box_left_new_dim=\dimen156
+\l__box_right_new_dim=\dimen157
+\l__box_internal_box=\box68
+\l__coffin_bounding_shift_dim=\dimen158
+\l__coffin_left_corner_dim=\dimen159
+\l__coffin_right_corner_dim=\dimen160
+\l__coffin_bottom_corner_dim=\dimen161
+\l__coffin_top_corner_dim=\dimen162
+\l__coffin_scaled_total_height_dim=\dimen163
+\l__coffin_scaled_width_dim=\dimen164
+))
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2012/07/16 v3990 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count133
+\l__xparse_m_args_int=\count134
+\l__xparse_mandatory_args_int=\count135
+\l__xparse_processor_int=\count136
+\l__xparse_v_nesting_int=\count137
+)
+\l_fontspec_script_int=\count138
+\l_fontspec_language_int=\count139
+\l_fontspec_strnum_int=\count140
+\l_fontspec_tmpa_dim=\dimen165
+\l_fontspec_tmpb_dim=\dimen166
+\l_fontspec_tmpc_dim=\dimen167
+Variant \tl_gset:cV already defined; not changing it on line 66
+
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec-patches.sty
+Package: fontspec-patches 2012/05/06 v2.2b Advanced font selection for XeLaTeX/
+LuaLaTeX
+
+(/usr/share/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
+)
+LaTeX Info: Redefining \em on input line 22.
+LaTeX Info: Redefining \emph on input line 29.
+LaTeX Info: Redefining \- on input line 32.
+
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \oldstylenums with arg. spec. 'm' on line 107.
+*************************************************
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \liningnums with arg. spec. 'm' on line 111.
+.................................................
+) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2012/05/06 v2.2b Advanced font selection for XeLaTeX/Lu
+aLaTeX
+
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texmf-dist/tex/latex/euenc/eu1enc.def
+File: eu1enc.def 2010/05/27 v0.1h Experimental Unicode font encodings
+)
+LaTeX Font Info:    Try loading font information for EU1+lmr on input line 100.
+
+
+(/usr/share/texmf-dist/tex/latex/euenc/eu1lmr.fd
+File: eu1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/usr/share/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
+other characters in Unicode lower plane
+
+(/usr/share/texmf-dist/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+LaTeX Font Info:    Try loading font information for EU1+lmss on input line 357
+.
+
+(/usr/share/texmf-dist/tex/latex/euenc/eu1lmss.fd
+File: eu1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+\tipaTiiicode=\count141
+\tipasavetokens=\toks21
+\tipachecktokens=\toks22
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen168
+\Gin@req@width=\dimen169
+))
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \fontspec with arg. spec. 'O{}m' on line 39.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmainfont with arg. spec. 'O{}m' on line 43.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setsansfont with arg. spec. 'O{}m' on line 47.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmonofont with arg. spec. 'O{}m' on line 51.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmathrm with arg. spec. 'O{}m' on line 59.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setboldmathrm with arg. spec. 'O{}m' on line 62.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmathsf with arg. spec. 'O{}m' on line 65.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmathtt with arg. spec. 'O{}m' on line 68.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontfamily with arg. spec. 'mO{}m' on line 84.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontface with arg. spec. 'mO{}m' on line 87.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \defaultfontfeatures with arg. spec. 'm' on line
+. 91.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \addfontfeatures with arg. spec. 'm' on line 107.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontfeature with arg. spec. 'mm' on line 118.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newAATfeature with arg. spec. 'mmmm' on line 125.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newICUfeature with arg. spec. 'mmm' on line 132.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \aliasfontfeature with arg. spec. 'mm' on line
+. 159.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \aliasfontfeatureoption with arg. spec. 'mmm' on
+. line 164.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontscript with arg. spec. 'mm' on line 169.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontlanguage with arg. spec. 'mm' on line 192.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareFontsExtensions with arg. spec. 'm' on
+. line 211.
+.................................................
+Variant \prop_gput:cnV already defined; not changing it on line 485
+Variant \prop_gput:cnx already defined; not changing it on line 486
+\l_fontspec_tmp_int=\count142
+LaTeX Info: Redefining \itshape on input line 1893.
+LaTeX Info: Redefining \slshape on input line 1897.
+LaTeX Info: Redefining \scshape on input line 1901.
+LaTeX Info: Redefining \upshape on input line 1905.
+
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texmf-dist/tex/latex/realscripts/realscripts.sty
+Package: realscripts 2010/09/30 v0.3 Access OpenType subscripts and superscript
+s
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \fakesubscript with arg. spec. 'm' on line 19.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \fakesuperscript with arg. spec. 'm' on line 22.
+.................................................
+
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \textsubscript with arg. spec. 's' on line 25.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \textsuperscript with arg. spec. 's' on line 28.
+*************************************************
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \realsubscript with arg. spec. 'm' on line 45.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \realsuperscript with arg. spec. 'm' on line 60.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \textsubsuperscript with arg. spec. 'sO{l}mm' on
+. line 137.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \textsupersubscript with arg. spec. 'sO{l}mm' on
+. line 140.
+.................................................
+\subsupersep=\dimen170
+) (/usr/share/texmf-dist/tex/latex/metalogo/metalogo.sty
+Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
+\xl@everylogo=\toks23
+\xl@@everylogo=\toks24
+LaTeX Info: Redefining \TeX on input line 193.
+LaTeX Info: Redefining \LaTeX on input line 202.
+LaTeX Info: Redefining \LaTeXe on input line 219.
+)
+\xxt@tempbox=\box69
+)
+(/usr/share/texmf-dist/tex/xelatex/polyglossia/polyglossia.sty
+Package: polyglossia 2012/04/29 v1.2.1 Babel replacement for XeLaTeX
+
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+\etb@tempcnta=\count143
+)
+(/usr/share/texmf-dist/tex/latex/makecmds/makecmds.sty
+Package: makecmds 2009/09/03 v1.0a extra command making commands
+)
+\xpg@normalclass=\XeTeXintercharclass4
+)
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2011/10/22 v5.1d context-sensitive quotations
+\csq@reset=\count144
+\csq@gtype=\count145
+\csq@glevel=\count146
+\csq@qlevel=\count147
+\csq@maxlvl=\count148
+\csq@tshold=\count149
+\csq@ltx@everypar=\toks25
+
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2011/10/22 v5.1d csquotes generic definitions
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Disabling multilingual quotes.
+Package csquotes Info: Redefining alias 'default' -> 'italian'.
+)
+(/usr/share/texmf-dist/tex/latex/verse/verse.sty
+Package: verse 2009/09/04 v2.4a verse typesetting
+\c@vslineno=\count150
+\c@poemline=\count151
+\c@fvsline=\count152
+\c@modulo@vs=\count153
+\c@verse@envctr=\count154
+\versewidth=\skip66
+\vgap=\skip67
+\vindent=\skip68
+\stanzaskip=\skip69
+\vleftskip=\skip70
+\vrightskip=\skip71
+\c@chrsinstr=\count155
+\beforepoemtitleskip=\skip72
+\afterpoemtitleskip=\skip73
+)
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package atbegshi Info: Package `crop' patched.
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen171
+\Hy@linkcounter=\count156
+\Hy@pagecounter=\count157
+
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count158
+
+(/usr/share/texmf-dist/tex/xelatex/xetexconfig/hyperref.cfg
+File: hyperref.cfg 2008/07/11 v1.2 hyperref configuration for XeLaTeX
+)
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4300.
+\c@Hy@tempcnt=\count159
+
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4653.
+\Fld@menulength=\count160
+\Field@Width=\dimen172
+\Fld@charsize=\dimen173
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
+\Hy@abspage=\count161
+\c@Item=\count162
+\c@Hfootnote=\count163
+)
+
+Package hyperref Message: Driver: hxetex.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2012/05/13 v6.82q Hyperref driver for XeTeX
+
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2012/05/13 v6.82q Hyperref: PDF Unicode definition (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box70
+\c@Hy@AnnotLevel=\count164
+\HyField@AnnotCount=\count165
+\Fld@listcount=\count166
+\c@bookmark@seq@number=\count167
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
+(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
+
+(rerunfilecheck)             Therefore file contents cannot be checked efficien
+tly
+(rerunfilecheck)             and the loading of the package is aborted.
+)
+\Hy@SectionHShift=\skip74
+)
+(/usr/share/texmf-dist/tex/xelatex/polyglossia/gloss-russian.ldf
+File: gloss-russian.ldf polyglossia: module for russian
+
+(/usr/share/texmf-dist/tex/xelatex/polyglossia/babelsh.def
+File: babelsh.def 2009/05/07 Babel common definitions for shorthands
+ Taken verbatim from babel.def (2008/07/06 v3.8l)
+)
+Package babel Info: Making " an active character on input line 41.
+)
+Package polyglossia Info: Default language is russian.
+\g_fontspec_family_Minion Pro_int=\count168
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(0)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Minion Pro/ICU:script=latn;language=DFLT;mapping=tex-text;"
+. 
+. * 'small caps' with NFSS spec.:
+. <->"Minion Pro/ICU:script=latn;language=DFLT;mapping=tex-text;+smcp;"
+. 
+. * 'bold' with NFSS spec.:
+. <->"Minion Pro/B/ICU:script=latn;language=DFLT;mapping=tex-text;"
+. 
+. * 'bold small caps' with NFSS spec.:
+. <->"Minion Pro/B/ICU:script=latn;language=DFLT;mapping=tex-text;+smcp;"
+. 
+. * 'italic' with NFSS spec.:
+. <->"Minion Pro/I/ICU:script=latn;language=DFLT;mapping=tex-text;"
+. 
+. * 'italic small caps' with NFSS spec.:
+. <->"Minion Pro/I/ICU:script=latn;language=DFLT;mapping=tex-text;+smcp;"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"Minion Pro/BI/ICU:script=latn;language=DFLT;mapping=tex-text;"
+. 
+. * 'bold italic small caps' with NFSS spec.:
+. <->"Minion Pro/BI/ICU:script=latn;language=DFLT;mapping=tex-text;+smcp;"
+.................................................
+\g_fontspec_family_Myriad Pro_int=\count169
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MyriadPro(0)' created for font 'Myriad Pro' with options
+. [Mapping=tex-text,].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Myriad Pro/ICU:script=latn;language=DFLT;mapping=tex-text;"
+. 
+. * 'bold' with NFSS spec.:
+. <->"Myriad Pro/B/ICU:script=latn;language=DFLT;mapping=tex-text;"
+. 
+. * 'italic' with NFSS spec.:
+. <->"Myriad Pro/I/ICU:script=latn;language=DFLT;mapping=tex-text;"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"Myriad Pro/BI/ICU:script=latn;language=DFLT;mapping=tex-text;"
+.................................................
+Package hyperref Info: Option `final' set `true' on input line 31.
+Package hyperref Info: Option `breaklinks' set `true' on input line 31.
+Package hyperref Info: Option `colorlinks' set `true' on input line 31.
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
+File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
+
+)
+Package hyperref Info: Option `unicode' set `true' on input line 31.
+\drop=\skip75
+
+
+LaTeX Warning: Unused global option(s):
+    [style=sufelements,defaultfont=standard].
+
+(./Записки.aux
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Minion Pro/ICU:script=cyrl;language=DFLT;mapping=tex-text;"
+. 
+. * 'small caps' with NFSS spec.:
+. <->"Minion Pro/ICU:script=cyrl;language=DFLT;mapping=tex-text;+smcp;"
+. 
+. * 'bold' with NFSS spec.:
+. <->"Minion Pro/B/ICU:script=cyrl;language=DFLT;mapping=tex-text;"
+. 
+. * 'bold small caps' with NFSS spec.:
+. <->"Minion Pro/B/ICU:script=cyrl;language=DFLT;mapping=tex-text;+smcp;"
+. 
+. * 'italic' with NFSS spec.:
+. <->"Minion Pro/I/ICU:script=cyrl;language=DFLT;mapping=tex-text;"
+. 
+. * 'italic small caps' with NFSS spec.:
+. <->"Minion Pro/I/ICU:script=cyrl;language=DFLT;mapping=tex-text;+smcp;"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"Minion Pro/BI/ICU:script=cyrl;language=DFLT;mapping=tex-text;"
+. 
+. * 'bold italic small caps' with NFSS spec.:
+. <->"Minion Pro/BI/ICU:script=cyrl;language=DFLT;mapping=tex-text;+smcp;"
+.................................................
+)
+\openout1 = `Записки.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 53.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 53.
+ (/usr/share/texmf-dist/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* hratio: 1:2
+* vratio: 1:2
+* modes: includehead includefoot twoside heightrounded 
+* h-part:(L,W,R)=(94.84251pt, 312.9803pt, 189.68506pt)
+* v-part:(T,H,B)=(52.40414pt, 687.83441pt, 104.80829pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=312.9803pt
+* \textheight=621.0pt
+* \oddsidemargin=22.57253pt
+* \evensidemargin=117.41507pt
+* \topmargin=-19.86584pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=85.35826pt
+* \marginparsep=12.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package crop Info: using `pdftex' graphics driver on input line 53.
+\SUF@label@part=\skip76
+\SUF@label@section=\skip77
+\SUF@label@subsection=\skip78
+\SUF@label@subsubsection=\skip79
+\SUF@label@paragraph=\skip80
+\SUF@label@subparagraph=\skip81
+\SUF@label@figure=\skip82
+\SUF@label@table=\skip83
+\SUF@tocindent@chap=\skip84
+\SUF@tocindent@sec=\skip85
+\SUF@tocindent@subsec=\skip86
+\SUF@tocindent@subsubsec=\skip87
+\SUF@tocindent@par=\skip88
+\SUF@tocindent@subpar=\skip89
+\SUF@tocindent@fig=\skip90
+\SUF@tocindent@tab=\skip91
+(/usr/share/texmf-dist/tex/latex/fixltxhyph/fixltxhyph.sty
+Package: fixltxhyph 2011/04/02 v.0.4 Small fix for hyphenating emphasized words
+ preceded by vocalic elision
+)
+.................................................
+. fontspec info: "setup-math"
+. 
+. Adjusting the maths setup (use [no-math] to avoid this).
+.................................................
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 53.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 53.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 53.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 53.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 53.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 53.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 53.
+LaTeX Font Info:    Redeclaring math accent \check on input line 53.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 53.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 53.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 53.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 53.
+LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 53.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> EU1/MinionPro(0)/m/n on input line 53.
+LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 53.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> EU1/MinionPro(0)/m/n on input line 53.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  EU1/MinionPro(0)/m/n --> EU1/MinionPro(0)/m/n on input 
+line 53.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  EU1/MinionPro(0)/m/n --> EU1/MinionPro(0)/m/n on input 
+line 53.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> EU1/MinionPro(0)/m/it on input line 53
+.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> EU1/MinionPro(0)/bx/n on input line 53
+.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> EU1/MyriadPro(0)/m/n on input line 53.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 53.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  EU1/MinionPro(0)/m/n --> EU1/MinionPro(0)/bx/n on input
+ line 53.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  EU1/MinionPro(0)/m/n --> EU1/MinionPro(0)/bx/n on input
+ line 53.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> EU1/MinionPro(0)/bx/it on input line 
+53.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> EU1/MyriadPro(0)/bx/n on input line 5
+3.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 53.
+\AtBeginShipoutBox=\box71
+Package hyperref Info: Link coloring ON on input line 53.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count170
+)
+LaTeX Info: Redefining \ref on input line 53.
+LaTeX Info: Redefining \pageref on input line 53.
+LaTeX Info: Redefining \nameref on input line 53.
+ (./Записки.out) (./Записки.out)
+\@outlinefile=\write3
+\openout3 = `Записки.out'.
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [1
+
+]
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [2
+
+
+]
+Глава 1.
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(2)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,Numbers=OldStyle].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Minion Pro/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;"
+. 
+. * 'small caps' with NFSS spec.:
+. <->"Minion Pro/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+smcp;"
+. 
+. * 'bold' with NFSS spec.:
+. <->"Minion Pro/B/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;"
+. 
+. * 'bold small caps' with NFSS spec.:
+. <->"Minion
+. Pro/B/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+smcp;"
+. 
+. * 'italic' with NFSS spec.:
+. <->"Minion Pro/I/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;"
+. 
+. * 'italic small caps' with NFSS spec.:
+. <->"Minion
+. Pro/I/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+smcp;"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"Minion Pro/BI/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;"
+. 
+. * 'bold italic small caps' with NFSS spec.:
+. <->"Minion
+. Pro/BI/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+smcp;"
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(3)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic,LetterSpace=6].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Minion
+. Pro/ICU:script=cyrl;language=DFLT;mapping=tex-text;letterspace=6;"
+. 
+. * 'small caps' with NFSS spec.:
+. <->"Minion
+. Pro/ICU:script=cyrl;language=DFLT;mapping=tex-text;letterspace=6;+smcp;"
+. 
+. * 'bold' with NFSS spec.:
+. <->"Minion
+. Pro/B/ICU:script=cyrl;language=DFLT;mapping=tex-text;letterspace=6;"
+. 
+. * 'bold small caps' with NFSS spec.:
+. <->"Minion
+. Pro/B/ICU:script=cyrl;language=DFLT;mapping=tex-text;letterspace=6;+smcp;"
+. 
+. * 'italic' with NFSS spec.:
+. <->"Minion
+. Pro/I/ICU:script=cyrl;language=DFLT;mapping=tex-text;letterspace=6;"
+. 
+. * 'italic small caps' with NFSS spec.:
+. <->"Minion
+. Pro/I/ICU:script=cyrl;language=DFLT;mapping=tex-text;letterspace=6;+smcp;"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"Minion
+. Pro/BI/ICU:script=cyrl;language=DFLT;mapping=tex-text;letterspace=6;"
+. 
+. * 'bold italic small caps' with NFSS spec.:
+. <->"Minion
+. Pro/BI/ICU:script=cyrl;language=DFLT;mapping=tex-text;letterspace=6;+smcp;"
+.................................................
+(./ch-20121204-01.tex
+Overfull \hbox (2.6438pt too wide) in paragraph at lines 13--18
+\EU1/MinionPro(1)/m/n/12 замыслы врага, но и подчеркну�
+�ь все свои действия по предот-
+ []
+
+
+Overfull \hbox (2.28778pt too wide) in paragraph at lines 13--18
+\EU1/MinionPro(1)/m/n/12 вращению войны, определить в �
+�амом благородном свете свои
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[3]
+Overfull \hbox (7.30379pt too wide) in paragraph at lines 64--72
+\EU1/MinionPro(1)/m/n/12 осложнения не делали войну ав
+томатически неизбежной в 1914
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[4]
+Overfull \hbox (2.25887pt too wide) in paragraph at lines 75--102
+\EU1/MinionPro(1)/m/n/12 капиталовложения. А Франция, �
+�ермания, США, Бельгия, Гол-
+ []
+
+
+Overfull \hbox (7.63176pt too wide) in paragraph at lines 75--102
+\EU1/MinionPro(1)/m/n/12 крывало торговый дефицит Бри�
+�ании практически полностью.
+ []
+
+
+Overfull \hbox (2.14378pt too wide) in paragraph at lines 75--102
+\EU1/MinionPro(1)/m/n/12 внимание, только усиливал фин
+ансовые позиции и общее бла-
+ []
+
+
+Overfull \hbox (3.43979pt too wide) in paragraph at lines 75--102
+\EU1/MinionPro(1)/m/n/12 анских просторах флота Его Ве
+личества. Флотские риски стра-
+ []
+
+)
+Overfull \hbox (4.71364pt too wide) in paragraph at lines 103--59
+[]\EU1/MinionPro(1)/m/n/12 Колебательное согласие Вели
+кобритании громить Германию
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[5]
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [6
+
+]
+Глава 2.
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(2)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,Numbers=OldStyle].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(3)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic,LetterSpace=6].
+. 
+. This font family consists of the following shapes:
+.................................................
+(./ch-20121204-02.tex
+Overfull \hbox (3.70782pt too wide) in paragraph at lines 31--43
+\EU1/MinionPro(1)/m/n/12 кое развитие событий, в Берли�
+� к кайзеру с письмом от 5 июля,
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[7]
+Overfull \hbox (15.13766pt too wide) in paragraph at lines 44--46
+[]\EU1/MinionPro(1)/m/n/12 Вильгельм пишет на донесени�
+� своего посла в Вене фон Чирш-
+ []
+
+
+Overfull \hbox (3.73766pt too wide) in paragraph at lines 47--54
+[]\EU1/MinionPro(1)/m/n/12 Франция только обещает Росс�
+�и какую-то военную помощь
+ []
+
+)
+Overfull \hbox (1.07674pt too wide) in paragraph at lines 55--61
+[]\EU1/MinionPro(1)/m/n/12 И русская военная и внешнепо
+литическая элита, влючая го-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[8]
+Глава 3.
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(2)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,Numbers=OldStyle].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(3)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic,LetterSpace=6].
+. 
+. This font family consists of the following shapes:
+.................................................
+(./ch-20121204-03.tex
+Overfull \hbox (9.66165pt too wide) in paragraph at lines 33--44
+[]\EU1/MinionPro(1)/m/n/12 При таком положении сербски�
+� дел стало очевидно, что стра-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[9
+
+])
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [10]
+Глава 4.
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(2)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,Numbers=OldStyle].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(3)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic,LetterSpace=6].
+. 
+. This font family consists of the following shapes:
+.................................................
+(./ch-20121204-04.tex
+Overfull \hbox (0.22777pt too wide) in paragraph at lines 7--12
+\EU1/MinionPro(1)/m/n/12 стительство террористам и пр�
+�чим антиавстрийским элемен-
+ []
+
+
+Overfull \hbox (2.54778pt too wide) in paragraph at lines 20--23
+[]\EU1/MinionPro(1)/m/n/12 Австрия требовала ужесточит
+ь контроль над сербскими СМИ
+ []
+
+
+Overfull \hbox (0.11578pt too wide) in paragraph at lines 20--23
+\EU1/MinionPro(1)/m/n/12 со стороны сербского правите�
+�ьства для снижения накала ан-
+ []
+
+
+Overfull \hbox (0.99576pt too wide) in paragraph at lines 23--25
+[]\EU1/MinionPro(1)/m/n/12 Австрия требовала закрыть в�
+�аждебные Австрии обществен-
+ []
+
+
+Overfull \hbox (1.76968pt too wide) in paragraph at lines 34--36
+[]\EU1/MinionPro(1)/m/n/12 Кроме одного (п.5 – 6): Сербы о�
+�казались допустить на свою
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[11
+
+]
+Overfull \hbox (2.08377pt too wide) in paragraph at lines 68--75
+\EU1/MinionPro(1)/m/n/12 события». Министр иностранны�
+� дел Грей порадовал нас муд-
+ []
+
+
+Overfull \hbox (11.0718pt too wide) in paragraph at lines 80--85
+\EU1/MinionPro(1)/m/n/12 ван, ибо всякое вмешательство
+ третьей державы (России) долж-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[12]
+Overfull \hbox (1.4558pt too wide) in paragraph at lines 105--116
+\EU1/MinionPro(1)/m/n/12 будет удерживать Россию от во
+йны с Австрией, а Англия оста-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[13]
+Overfull \hbox (3.58165pt too wide) in paragraph at lines 130--133
+[]\EU1/MinionPro(1)/m/n/12 Николай хватается за послед�
+�юю соломинку: предлагает пе-
+ []
+
+
+Overfull \hbox (2.2758pt too wide) in paragraph at lines 134--143
+\EU1/MinionPro(1)/m/n/12 ковнику Н. А. Романову азы моб�
+�лизационных процессов. Ча-
+ []
+
+
+Overfull \hbox (5.8638pt too wide) in paragraph at lines 134--143
+\EU1/MinionPro(1)/m/n/12 ков многозначительная тишина
+. Царь колеблется. Ему не очень
+ []
+
+
+Overfull \hbox (7.7398pt too wide) in paragraph at lines 134--143
+\EU1/MinionPro(1)/m/n/12 хочется воевать в одиночку, н�
+� и стать неподготовленной жерт-
+ []
+
+
+Overfull \hbox (9.9478pt too wide) in paragraph at lines 134--143
+\EU1/MinionPro(1)/m/n/12 вой агрессии тоже страшно. Ни�
+�огда ещё перед Николаем Алек-
+ []
+
+
+Overfull \hbox (9.03976pt too wide) in paragraph at lines 149--152
+\EU1/MinionPro(1)/m/n/12 щую мобилизацию, Германия нач
+ала общую мобилизацию. Гер-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[14])
+Overfull \hbox (1.63364pt too wide) in paragraph at lines 180--65
+[]\EU1/MinionPro(1)/m/n/12 Осталось только понять экон�
+�мическую подоплёку участия
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[15]
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [16
+
+]
+Глава 5.
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(2)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,Numbers=OldStyle].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(3)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic,LetterSpace=6].
+. 
+. This font family consists of the following shapes:
+.................................................
+(./ch-20121204-05.tex
+Overfull \hbox (1.1038pt too wide) in paragraph at lines 6--15
+\EU1/MinionPro(1)/m/n/12 са и Лотарингии, стартовый ка�
+�итал в пять миллиардов фран-
+ []
+
+
+Overfull \hbox (4.27979pt too wide) in paragraph at lines 6--15
+\EU1/MinionPro(1)/m/n/12 ства. Как и полагается стране 
+«  форсированного» развития Гер-
+ []
+
+
+Overfull \hbox (1.02773pt too wide) in paragraph at lines 6--15
+\EU1/MinionPro(1)/m/n/12 Высокие технологии, энергово�
+�руженность, металлургия, ма-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[17])
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [18]
+Глава 6.
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(2)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,Numbers=OldStyle].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(3)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic,LetterSpace=6].
+. 
+. This font family consists of the following shapes:
+.................................................
+(./ch-20121205.tex
+Overfull \hbox (4.12375pt too wide) in paragraph at lines 5--9
+\EU1/MinionPro(1)/m/n/12 мущества, оказанные третьему 
+государству распространялись
+ []
+
+
+Overfull \hbox (0.16776pt too wide) in paragraph at lines 5--9
+\EU1/MinionPro(1)/m/n/12 на договаривающиеся стороны �
+�  немедленно и безвозмездно». 
+ []
+
+
+Overfull \hbox (0.93977pt too wide) in paragraph at lines 15--22
+\EU1/MinionPro(1)/m/n/12 ственного устранения конкуре
+нтов с аграрного рынка. Лозун-
+ []
+
+
+Overfull \hbox (0.59177pt too wide) in paragraph at lines 30--43
+\EU1/MinionPro(1)/m/n/12 на европейские рынки, составл
+яя конкуренцию русскому хле-
+ []
+
+
+Overfull \hbox (0.29579pt too wide) in paragraph at lines 30--43
+\EU1/MinionPro(1)/m/n/12 ет строго адресованную проти�
+� России тарифную войну. Вой-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[19
+
+]
+Overfull \hbox (10.01176pt too wide) in paragraph at lines 51--57
+\EU1/MinionPro(1)/m/n/12 обстоятельств достаточно дол
+гое время. Помимо развития про-
+ []
+
+
+Overfull \hbox (0.52777pt too wide) in paragraph at lines 51--57
+\EU1/MinionPro(1)/m/n/12 сельское хозяйство. С-х Герма�
+�ии развивалось как за счёт экс-
+ []
+
+
+Overfull \hbox (13.37976pt too wide) in paragraph at lines 74--86
+\EU1/MinionPro(1)/m/n/12 зерно, увеличиваем производс�
+�во собственного, вывозим, поль-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[20]
+Overfull \hbox (1.51979pt too wide) in paragraph at lines 87--95
+\EU1/MinionPro(1)/m/n/12 более, что позже России пришл�
+�сь увеличивать пошлины сна-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[21]
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [22]
+Overfull \hbox (2.11179pt too wide) in paragraph at lines 160--163
+[]\EU1/MinionPro(1)/m/n/12 Как вам сказать, повышение т�
+�моженного тарифа в таких объ-
+ []
+
+
+Overfull \hbox (0.63977pt too wide) in paragraph at lines 183--187
+\EU1/MinionPro(1)/m/n/12 воры Германии с Австро-Венгри
+ей, Бельгией, Италией, Швей-
+ []
+
+
+Overfull \hbox (8.12778pt too wide) in paragraph at lines 188--196
+\EU1/MinionPro(1)/m/n/12 обще было предоставлено прав�
+� беспошлинного экспорта) Гер-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[23]
+Overfull \hbox (7.55177pt too wide) in paragraph at lines 214--218
+[]\EU1/MinionPro(1)/m/n/12 Россия полностью была выбит�
+� с германского продовольствен-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[24])
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [25]
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [26
+
+]
+Глава 7.
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(2)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,Numbers=OldStyle].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(3)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic,LetterSpace=6].
+. 
+. This font family consists of the following shapes:
+.................................................
+(./ch-20121206.tex
+Overfull \hbox (0.77176pt too wide) in paragraph at lines 9--13
+\EU1/MinionPro(1)/m/n/12 следующее: Англия сохраняет н
+ейтралитет, если Германия по-
+ []
+
+
+Overfull \hbox (0.64966pt too wide) in paragraph at lines 24--32
+[]\EU1/MinionPro(1)/m/n/12 Кайзер был в восторгге! Фран�
+�-Иосиф, проинформирован-
+ []
+
+
+Overfull \hbox (0.55978pt too wide) in paragraph at lines 24--32
+\EU1/MinionPro(1)/m/n/12 Понятно, что никакого возмезд
+ия от двух обескровленных го-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[27]
+Overfull \hbox (3.30777pt too wide) in paragraph at lines 64--83
+\EU1/MinionPro(1)/m/n/12 неприметный человек и сообщи�
+�, что германские войска толь-
+ []
+
+
+Overfull \hbox (3.37321pt too wide) in paragraph at lines 64--83
+\EU1/MinionPro(1)/m/n/12 ко что вторглись в «  маленьку
+ю, бедную, обиженную Бельгию».
+ []
+
+
+Overfull \hbox (0.89575pt too wide) in paragraph at lines 64--83
+\EU1/MinionPro(1)/m/n/12 ту крошки — Бельгии). Три мини
+стра британского правитель-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[28])
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [29]
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [30
+
+]
+Глава 8.
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(2)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,Numbers=OldStyle].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(3)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic,LetterSpace=6].
+. 
+. This font family consists of the following shapes:
+.................................................
+(./ch-20121212.tex
+Overfull \hbox (6.92967pt too wide) in paragraph at lines 12--27
+[]\EU1/MinionPro(1)/m/n/12 19 февраля 1861 года началось о�
+�вобождение частновладель-
+ []
+
+
+Overfull \hbox (10.09175pt too wide) in paragraph at lines 12--27
+\EU1/MinionPro(1)/m/n/12 вительство выплатило помещик
+ам стоимость переданной осво-
+ []
+
+
+Overfull \hbox (1.67978pt too wide) in paragraph at lines 12--27
+\EU1/MinionPro(1)/m/n/12 щиков происходили) вычли из э�
+�ой, в целом, огроменной сум-
+ []
+
+
+Overfull \hbox (1.20688pt too wide) in paragraph at lines 12--27
+\EU1/MinionPro(1)/m/n/12 учреждениям. Так заминусовал�
+� 316 миллионов рублей. И по-
+ []
+
+
+Overfull \hbox (0.59488pt too wide) in paragraph at lines 12--27
+\EU1/MinionPro(1)/m/n/12 ма выдавалась помещикам не де
+ньгами. А специальными цен-
+ []
+
+
+Overfull \hbox (3.62688pt too wide) in paragraph at lines 12--27
+\EU1/MinionPro(1)/m/n/12 ными бумагами (5%-ми выкупными 
+свидетельствами). И есте-
+ []
+
+
+Overfull \hbox (1.65176pt too wide) in paragraph at lines 12--27
+\EU1/MinionPro(1)/m/n/12 же номинальной стоимости, при
+мерно процентов на 20-ть ни-
+ []
+
+
+Overfull \hbox (0.97176pt too wide) in paragraph at lines 28--31
+\EU1/MinionPro(1)/m/n/12 торой спаивают несчастного К�
+�рандышева в «   Бесприданице»,
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[31]
+Overfull \hbox (11.46376pt too wide) in paragraph at lines 58--78
+\EU1/MinionPro(1)/m/n/12 историческую по интересу мин�
+�ту. Большинство кинулось про-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[32]
+Overfull \hbox (5.00778pt too wide) in paragraph at lines 83--95
+\EU1/MinionPro(1)/m/n/12 стьянстве. Общая сумма выкупн
+ых платежей, полученная пра-
+ []
+
+
+Overfull \hbox (0.32964pt too wide) in paragraph at lines 100--109
+[]\EU1/MinionPro(1)/m/n/12 Конечно, наделы у крестьян п�
+�сле освобождения оказались
+ []
+
+
+Overfull \hbox (1.91978pt too wide) in paragraph at lines 100--109
+\EU1/MinionPro(1)/m/n/12 лю, оставшуюся в собственност
+и у помещиков. Уже после всех
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[33]
+Overfull \hbox (2.22379pt too wide) in paragraph at lines 123--130
+\EU1/MinionPro(1)/m/n/12 сии центральной на перефирию,
+ где русской деревни в её клас-
+ []
+
+
+Overfull \hbox (0.45091pt too wide) in paragraph at lines 130--137
+\EU1/MinionPro(1)/m/n/12 вать. Но прогресс этот надо ср
+авнивать. К началу 20 века сред-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[34]
+Overfull \hbox (0.44777pt too wide) in paragraph at lines 154--179
+\EU1/MinionPro(1)/m/n/12 ственного производства, а из-�
+�а экономической слабости кре-
+ []
+
+
+Overfull \hbox (0.66376pt too wide) in paragraph at lines 154--179
+\EU1/MinionPro(1)/m/n/12 страннных банков в России по �
+�оссийскому законодательству
+ []
+
+
+Overfull \hbox (5.25179pt too wide) in paragraph at lines 154--179
+\EU1/MinionPro(1)/m/n/12 ский банк. Когда банки занима�
+�тся хлебной спекуляцией, бан-
+ []
+
+
+Overfull \hbox (3.71178pt too wide) in paragraph at lines 154--179
+\EU1/MinionPro(1)/m/n/12 ки не заинтересованы в создан
+ии крупных капиталистических
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [35]
+Overfull \hbox (0.80377pt too wide) in paragraph at lines 198--210
+[]\EU1/MinionPro(1)/m/n/12 Уровень механизации сельско
+го хозяйства России (соотноше-
+ []
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+[36])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 73.
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [37]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 73.
+ (./Записки.aux
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'MinionPro(1)' created for font 'Minion Pro' with options
+. [Mapping=tex-text,,Script=Cyrillic].
+. 
+. This font family consists of the following shapes:
+.................................................
+)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 73.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 73.
+ ) 
+Here is how much of TeX's memory you used:
+ 23386 strings out of 494004
+ 453726 string characters out of 3155729
+ 520195 words of memory out of 3000000
+ 26335 multiletter control sequences out of 15000+200000
+ 4258 words of font info for 55 fonts, out of 3000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 60i,11n,94p,836b,501s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on Записки.pdf (37 pages).
