@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"
+>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+ <head>
+  <meta charset="UTF-8"/>
+  <title>0001-text-ladder</title>
+  <style>
+    div.entry {
+      display: flex;
+    }
+    div.spacer {
+      min-width: 0em;
+    }
+    div.cell {
+      flex-grow: 1;
+    }
+    div.header {
+      min-height: 2ex;
+      border: 1px solid red;
+    }
+    div.content {
+    }
+  </style>
+  <script>
+  //<![CDATA[
+    function makeLadder() {
+      Array.prototype.forEach.call(
+        document.querySelectorAll('div.entry'),
+        function(el) {
+          let spacer = el.getElementsByClassName('spacer')[0];
+          let cell = el.getElementsByClassName('cell')[0];
+          spacer.style['min-width'] = 2 * cell.getAttribute('data-ord') + 'em';
+        }
+      );
+    }
+    function unmakeLadder() {
+      Array.prototype.forEach.call(
+        document.querySelectorAll('div.entry'),
+        function(el) {
+          let spacer = el.getElementsByClassName('spacer')[0];
+          spacer.style['min-width'] = '0em';
+        }
+      );
+    }
+  //]]>
+  </script>
+ </head>
+ <body>
+  <button type="button" onclick="makeLadder();">Make ladder</button>
+  <button type="button" onclick="unmakeLadder();">Unmake ladder</button>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="1"><div class="header"></div><div class="content">
+    The words of the Preacher, the son of David, king in Jerusalem.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="2"><div class="header"></div><div class="content">
+    Vanity of vanities, saith the Preacher, vanity of vanities; all is vanity.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="3"><div class="header"></div><div class="content">
+    What profit hath a man of all his labour which he taketh under the sun?
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="4"><div class="header"></div><div class="content">
+    One generation passeth away, and another generation cometh: but the earth
+    abideth for ever.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="5">
+    The sun also ariseth, and the sun goeth down, and hasteth to his place where
+    he arose.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="6"><div class="header"></div><div class="content">
+    The wind goeth toward the south, and turneth about unto the north; it
+    whirleth about continually, and the wind returneth again according to his
+    circuits.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="7"><div class="header"></div><div class="content">
+    All the rivers run into the sea; yet the sea is not full; unto the place
+    from whence the rivers come, thither they return again.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="8"><div class="header"></div><div class="content">
+    All things are full of labour; man cannot utter it: the eye is not satisfied
+    with seeing, nor the ear filled with hearing.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="9"><div class="header"></div><div class="content">
+    The thing that hath been, it is that which shall be; and that which is done
+    is that which shall be done: and there is no new thing under the sun.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="10"><div class="header"></div><div class="content">
+    Is there any thing whereof it may be said, See, this is new? it hath been
+    already of old time, which was before us.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="11"><div class="header"></div><div class="content">
+    There is no remembrance of former things; neither shall there be any
+    remembrance of things that are to come with those that shall come after.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="12"><div class="header"></div><div class="content">
+    I the Preacher was king over Israel in Jerusalem.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="13"><div class="header"></div><div class="content">
+    And I gave my heart to seek and search out by wisdom concerning all things
+    that are done under heaven: this sore travail hath God given to the sons of
+    man to be exercised therewith.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="14"><div class="header"></div><div class="content">
+    I have seen all the works that are done under the sun; and, behold, all is
+    vanity and vexation of spirit.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="15"><div class="header"></div><div class="content">
+    That which is crooked cannot be made straight: and that which is wanting
+    cannot be numbered.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="16"><div class="header"></div><div class="content">
+    I communed with mine own heart, saying, Lo, I am come to great estate, and
+    have gotten more wisdom than all they that have been before me in Jerusalem:
+    yea, my heart had great experience of wisdom and knowledge.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="17"><div class="header"></div><div class="content">
+    And I gave my heart to know wisdom, and to know madness and folly: I
+    perceived that this also is vexation of spirit.
+   </div></div>
+  </div>
+  <div class="entry"><div class="spacer"></div>
+   <div class="cell" data-ord="18"><div class="header"></div><div class="content">
+    For in much wisdom is much grief: and he that increaseth knowledge
+    increaseth sorrow.
+   </div></div>
+  </div>
+ </body>
+</html>
