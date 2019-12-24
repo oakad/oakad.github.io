@@ -34,7 +34,7 @@
           <div class="body" role="main">
             
   <div class="section" id="the-m-machine-computer-architecture-for-the-long-now">
-<h1>The M Machine: computer architecture for the long now <a class="footnote-reference brackets" href="#id2" id="id1">*</a><a class="headerlink" href="#the-m-machine-computer-architecture-for-the-long-now" title="Permalink to this headline">¶</a></h1>
+<h1>The M Machine: computer architecture for the long now <a class="footnote-reference brackets" href="#id3" id="id1">*</a><a class="headerlink" href="#the-m-machine-computer-architecture-for-the-long-now" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="an-exercise-in-design">
 <h2>An exercise in design<a class="headerlink" href="#an-exercise-in-design" title="Permalink to this headline">¶</a></h2>
 <p>Modern computer architectures had all originated in the 1980s (and some even
@@ -96,14 +96,27 @@ being processed.</p></li>
 <li><p>Consistent encoding format at the slight expense of density in favor of
 better long term extensibility</p></li>
 </ul>
-<p>The encoding of instruction is, itself, expressed in terms of programming a
-very simple machine, whereupon an MMArch instruction can be seen as assembled
-by a number of simple sub-instructions. Nevertheless, MMArch instructions are either
-executed as a whole or not at all - sub instructions can not be treated as
-application software level entities.</p>
+<p>To this end, an encoding based on Even-Rodeh <a class="footnote-reference brackets" href="#id4" id="id2">†</a> self delimiting code is
+employed. A slight penalty in decoding speed and code density is offset by the
+virtually unlimited extensibility of the proposed scheme.</p>
+<p>The general format of instruction in memory is as following:</p>
+<ul class="simple">
+<li><p>ER coded instruction length in bytes minus one</p></li>
+<li><p>ER coded opcode</p></li>
+<li><p>ER coded arguments to instruction, first to last</p></li>
+<li><p>Zero bit padding to full byte</p></li>
+</ul>
+<p>The proper number of supplied arguments as well as their interpretation (be it
+an immediate value or OpSet line number) is established based on opcode. If
+any such values exceed limits supported by the implementation or otherwise can
+not be processed, the illegal instruction handler will be invoked, possibly
+providing a software based decoding.</p>
 <dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">*</a></span></dt>
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">*</a></span></dt>
 <dd><p>Not related to the Long Now Foundation</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">†</a></span></dt>
+<dd><p>Preliminary. Some other self delimiting coding may be found more suitable.</p>
 </dd>
 </dl>
 </div>

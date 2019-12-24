@@ -65,10 +65,23 @@ The instruction set of MMArch follows the CISC philosophy:
 - Consistent encoding format at the slight expense of density in favor of
   better long term extensibility
 
-The encoding of instruction is, itself, expressed in terms of programming a
-very simple machine, whereupon an MMArch instruction can be seen as assembled
-by a number of simple sub-instructions. Nevertheless, MMArch instructions are either
-executed as a whole or not at all - sub instructions can not be treated as
-application software level entities.
+To this end, an encoding based on Even-Rodeh [*]_ self delimiting code is
+employed. A slight penalty in decoding speed and code density is offset by the
+virtually unlimited extensibility of the proposed scheme.
+
+The general format of instruction in memory is as following:
+
+- ER coded instruction length in bytes minus one
+- ER coded opcode
+- ER coded arguments to instruction, first to last
+- Zero bit padding to full byte
+
+The proper number of supplied arguments as well as their interpretation (be it
+an immediate value or OpSet line number) is established based on opcode. If
+any such values exceed limits supported by the implementation or otherwise can
+not be processed, the illegal instruction handler will be invoked, possibly
+providing a software based decoding.
+
 
 .. [*] Not related to the Long Now Foundation
+.. [*] Preliminary. Some other self delimiting coding may be found more suitable.
