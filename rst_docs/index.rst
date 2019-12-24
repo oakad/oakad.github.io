@@ -1,6 +1,6 @@
-=========================================================
-The M Machine: computer architecture for the long now[†]_
-=========================================================
+==========================================================
+The M Machine: computer architecture for the long now [*]_
+==========================================================
 ---------------------
 An exercise in design
 ---------------------
@@ -71,4 +71,4 @@ by a number of simple sub-instructions. Nevertheless, MMArch instructions are ei
 executed as a whole or not at all - sub instructions can not be treated as
 application software level entities.
 
-.. [†] Not related to the Long Now Foundation
+.. [*] Not related to the Long Now Foundation

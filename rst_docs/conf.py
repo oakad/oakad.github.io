@@ -22,23 +22,26 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = []
+extensions = ['recommonmark']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['res/_templates']
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+source_suffix = {
+  '.rst': 'restructuredtext',
+  '.md': 'markdown',
+}
 
 # The encoding of source files.
-#source_encoding = 'utf-8'
+source_encoding = 'utf-8'
 
 # The master toctree document.
 master_doc = 'index'
 
 # General information about the project.
 project = u'Alex Dubov\'s assorted articles'
-copyright = u'2010 - 2012, Alex Dubov <oakad@yahoo.com>'
+copyright = u'2010 - 2020, Alex Dubov <oakad@yahoo.com>'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
