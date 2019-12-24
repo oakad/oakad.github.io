@@ -1,49 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Access rights management: slower means better &mdash; Alex Dubov&#39;s assorted articles</title>
-    
+    <meta charset="utf-8" />
+    <title>Access rights management: slower means better &#8212; Alex Dubov&#39;s assorted articles</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="copyright" title="Copyright" href="copyright.html" />
-    <link rel="top" title="Alex Dubov&#39;s assorted articles" href="index.html" />
-    <link rel="up" title="Useful components for the prosperous future" href="index-ucpf.html" />
-    <link rel="next" title="Versatile resource sharing system" href="vrss.html" />
-    <link rel="prev" title="Brief discussion of input/output interface traits" href="iotraits.html" /> 
-  </head>
-  <body role="document">
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" /> 
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="vrss.html" title="Versatile resource sharing system"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="iotraits.html" title="Brief discussion of input/output interface traits"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Alex Dubov&#39;s assorted articles</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="index-ucpf.html" accesskey="U">Useful components for the prosperous future</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Alex Dubov&#39;s assorted articles</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -64,32 +45,32 @@ experienced by rights management systems can easily be attributed to
 incorrect identification of foundational entities of those systems.</p>
 <p>There exist a considerable body of publications and software dedicated to
 the issues of access rights and identity management. Unfortunately, many of
-these works suffer from over formalization and other common &#8220;design by
-committee&#8221; drawbacks, making them very difficult to implement and use
+these works suffer from over formalization and other common “design by
+committee” drawbacks, making them very difficult to implement and use
 properly. Invariably, implementational difficulties translate into future
 security failures. Thus, design of a quality access right management system
 should not only be formally correct and featureful, but must also pay a close
-attention to &#8220;mental ergonomics&#8221; of its developers and end-users.</p>
+attention to “mental ergonomics” of its developers and end-users.</p>
 <div class="section" id="basic-traits-of-rights-management-systems">
 <h2>Basic traits of rights management systems<a class="headerlink" href="#basic-traits-of-rights-management-systems" title="Permalink to this headline">¶</a></h2>
-<p>Prior to management any sort of &#8220;rights&#8221;, one shall establish the nature of
-objects and subjects, concept of &#8220;rights&#8221; applies to. In regard to computer
+<p>Prior to management any sort of “rights”, one shall establish the nature of
+objects and subjects, concept of “rights” applies to. In regard to computer
 system, identifying the object is rather easy.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Just like with any system, access to a computer system always involves
+<p class="admonition-title">Note</p>
+<p>Just like with any system, access to a computer system always involves
 observation or modification (control) of its state variables. Following
 the accepted terminology (due to R. E. Kalman), we can formulate the
 following rule. For every access channel established with the system, two
 non-exhaustive, overlapping sets of system variables will be available: set
 of controllable system state variables and (usually larger) set of observable
-ones. These sets together form the &#8220;access rights set&#8221; (ARS) of the channel.</p>
+ones. These sets together form the “access rights set” (ARS) of the channel.</p>
 </div>
 <p>The issue of subjects, accessing the computer system is way more complicated.
 First, it is clear, that computer system can only respond to an information,
-emerging from a &#8220;near end&#8221; of an access channel. It has no material way to
-&#8220;perceive&#8221; what&#8217;s going on on the &#8220;far end&#8221; of the mentioned access channel and
-thus must rely on &#8220;identity proofs&#8221; of various strength to establish the
+emerging from a “near end” of an access channel. It has no material way to
+“perceive” what’s going on on the “far end” of the mentioned access channel and
+thus must rely on “identity proofs” of various strength to establish the
 appropriate ARS.</p>
 </div>
 </div>
@@ -100,7 +81,7 @@ appropriate ARS.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
+  <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Access rights management: slower means better</a><ul>
 <li><a class="reference internal" href="#basic-traits-of-rights-management-systems">Basic traits of rights management systems</a></li>
@@ -108,30 +89,21 @@ appropriate ARS.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="iotraits.html"
-                        title="previous chapter">Brief discussion of input/output interface traits</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="vrss.html"
-                        title="next chapter">Versatile resource sharing system</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/sarm.txt"
+      <li><a href="_sources/sarm.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -144,19 +116,12 @@ appropriate ARS.</p>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="vrss.html" title="Versatile resource sharing system"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="iotraits.html" title="Brief discussion of input/output interface traits"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Alex Dubov&#39;s assorted articles</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="index-ucpf.html" >Useful components for the prosperous future</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Alex Dubov&#39;s assorted articles</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; <a href="copyright.html">Copyright</a> 2010 - 2012, Alex Dubov &lt;oakad@yahoo.com&gt;.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+        &#169; <a href="copyright.html">Copyright</a> 2010 - 2012, Alex Dubov &lt;oakad@yahoo.com&gt;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
     </div>
   </body>
 </html>
