@@ -73,7 +73,11 @@ The general format of instruction in memory is as following:
 
 - ER coded instruction length in bytes minus one
 - ER coded opcode
-- ER coded arguments to instruction, first to last
+- Fixed bit width or ER coded arguments to instruction, first to last
+
+  - Line ids and immediates are always ER coded
+  - Instruction modes and modifiers can be fixed width
+
 - Zero bit padding to full byte
 
 The proper number of supplied arguments as well as their interpretation (be it

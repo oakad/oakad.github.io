@@ -103,7 +103,12 @@ virtually unlimited extensibility of the proposed scheme.</p>
 <ul class="simple">
 <li><p>ER coded instruction length in bytes minus one</p></li>
 <li><p>ER coded opcode</p></li>
-<li><p>ER coded arguments to instruction, first to last</p></li>
+<li><p>Fixed bit width or ER coded arguments to instruction, first to last</p>
+<ul>
+<li><p>Line ids and immediates are always ER coded</p></li>
+<li><p>Instruction modes and modifiers can be fixed width</p></li>
+</ul>
+</li>
 <li><p>Zero bit padding to full byte</p></li>
 </ul>
 <p>The proper number of supplied arguments as well as their interpretation (be it
