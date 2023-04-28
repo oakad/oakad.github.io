@@ -40,7 +40,7 @@ source_encoding = 'utf-8'
 master_doc = 'index'
 
 # General information about the project.
-project = u'The M Machine'
+project = u'Nothing special'
 copyright = u'2010 - 2023, Alex Dubov <oakad@yahoo.com>'
 
 # The version info for the project you're documenting, acts as replacement for
