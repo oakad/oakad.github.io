@@ -1,18 +1,18 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Windowing system of the future in the mirror of the present &#8212; The M Machine</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -24,7 +24,8 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="index.html">The M Machine</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">The M Machine</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Windowing system of the future in the mirror of the present</a></li> 
       </ul>
     </div>  
 
@@ -33,8 +34,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="windowing-system-of-the-future-in-the-mirror-of-the-present">
-<h1>Windowing system of the future in the mirror of the present<a class="headerlink" href="#windowing-system-of-the-future-in-the-mirror-of-the-present" title="Permalink to this headline">¶</a></h1>
+  <section id="windowing-system-of-the-future-in-the-mirror-of-the-present">
+<h1>Windowing system of the future in the mirror of the present<a class="headerlink" href="#windowing-system-of-the-future-in-the-mirror-of-the-present" title="Permalink to this heading">¶</a></h1>
 <p><em>This article is still being written.</em></p>
 <p>Graphical windowing systems (also called GUI, though, technically, GUI can
 be organized around different principles) are considered to be one of the
@@ -50,8 +51,8 @@ interfaces. It so appears, that one step in right direction was already made
 many years ago (<a class="reference external" href="http://en.wikipedia.org/wiki/NeWS">Sun NeWS</a> windowing
 system), but it was not the right time, and probably, not the right
 implementation approach for that system to be successful.</p>
-<div class="section" id="basic-architecture-and-abilities-of-the-traditional-windowing-system">
-<h2>Basic architecture and abilities of the traditional windowing system<a class="headerlink" href="#basic-architecture-and-abilities-of-the-traditional-windowing-system" title="Permalink to this headline">¶</a></h2>
+<section id="basic-architecture-and-abilities-of-the-traditional-windowing-system">
+<h2>Basic architecture and abilities of the traditional windowing system<a class="headerlink" href="#basic-architecture-and-abilities-of-the-traditional-windowing-system" title="Permalink to this heading">¶</a></h2>
 <p>It worth remembering that graphical windowing systems were first developed when
 workstations had essentially minuscule performance compared to what we used to
 these days. It won’t be an exaggeration to say that for a personal workstation
@@ -75,16 +76,16 @@ specific programing interfaces, it will become clear that graphical applications
 don’t do anything too unusual. Typical such application shall interact with
 two important devices: output, behaving like a <a class="reference internal" href="iotraits.html#rm-dev"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">remote</span> <span class="pre">memory</span></code></a>
 interface and input, of simple <a class="reference internal" href="iotraits.html#mp-dev"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">message</span> <span class="pre">passing</span></code></a> type.</p>
-<div class="section" id="drawing-the-output">
-<h3>Drawing the output<a class="headerlink" href="#drawing-the-output" title="Permalink to this headline">¶</a></h3>
+<section id="drawing-the-output">
+<h3>Drawing the output<a class="headerlink" href="#drawing-the-output" title="Permalink to this heading">¶</a></h3>
 <p>To conserve resources, traditional windowing system tried to maintain as little
 output state, as possible. It worst case, only information about pixels actually
 present in user visible display area was retained. Therefore, every user action
 leading to change of the exposed window area requires the controlled application
 to redraw the window, either partially or completely.</p>
-</div>
-<div class="section" id="getting-the-input">
-<h3>Getting the input<a class="headerlink" href="#getting-the-input" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="getting-the-input">
+<h3>Getting the input<a class="headerlink" href="#getting-the-input" title="Permalink to this heading">¶</a></h3>
 <p>While output device operation is fairly straightforward, default input device
 historically evolved into a rather curious beast. First, it way too often relies
 on a set of custom, used only in context of graphic subsystem, programing
@@ -135,9 +136,9 @@ somehow, further cluttering the input interface. Yet, many common user actions
 are never implemented with the help of common windowing system input queue,
 forcing applications supporting them to revert to underlying OS’ generic device
 access methods.</p>
-</div>
-<div class="section" id="networking">
-<h3>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="networking">
+<h3>Networking<a class="headerlink" href="#networking" title="Permalink to this heading">¶</a></h3>
 <p>Because hardware of old used for initial design of traditional windowing systems
 was barely fast enough to support even a single user session properly, the whole
 windowing system state, including its input and output devices existed as a
@@ -159,24 +160,26 @@ counting inevitable visual quality degradation of the graphical data, is
 inability to access individual remote applications on the client side like if
 they were local. This is not a theoretical problem, but rather an artifact of
 the particular functionality loaded upon the windowing system context object.</p>
-</div>
-</div>
-<div class="section" id="the-failure-which-is-x11">
-<h2>The failure which is X11<a class="headerlink" href="#the-failure-which-is-x11" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="the-failure-which-is-x11">
+<h2>The failure which is X11<a class="headerlink" href="#the-failure-which-is-x11" title="Permalink to this heading">¶</a></h2>
 <p>Even in the days of first graphical user interfaces, some people tried to
 perceive the future. After couple of not so successful attempts, X11 was
 created, to become first “natively” networked graphical windowing system.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Windowing system of the future in the mirror of the present</a><ul>
 <li><a class="reference internal" href="#basic-architecture-and-abilities-of-the-traditional-windowing-system">Basic architecture and abilities of the traditional windowing system</a><ul>
 <li><a class="reference internal" href="#drawing-the-output">Drawing the output</a></li>
@@ -189,6 +192,7 @@ created, to become first “natively” networked graphical windowing system.</p
 </li>
 </ul>
 
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -200,12 +204,12 @@ created, to become first “natively” networked graphical windowing system.</p
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -216,12 +220,13 @@ created, to become first “natively” networked graphical windowing system.</p
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="nav-item nav-item-0"><a href="index.html">The M Machine</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">The M Machine</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Windowing system of the future in the mirror of the present</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; <a href="copyright.html">Copyright</a> 2010 - 2020, Alex Dubov &lt;oakad@yahoo.com&gt;.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+        &#169; <a href="copyright.html">Copyright</a> 2010 - 2023, Alex Dubov &lt;oakad@yahoo.com&gt;.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
   </body>
 </html>

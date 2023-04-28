@@ -1,18 +1,18 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Brief discussion of input/output interface traits &#8212; The M Machine</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -24,7 +24,8 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="index.html">The M Machine</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">The M Machine</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Brief discussion of input/output interface traits</a></li> 
       </ul>
     </div>  
 
@@ -33,8 +34,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="brief-discussion-of-input-output-interface-traits">
-<h1>Brief discussion of input/output interface traits<a class="headerlink" href="#brief-discussion-of-input-output-interface-traits" title="Permalink to this headline">¶</a></h1>
+  <section id="brief-discussion-of-input-output-interface-traits">
+<h1>Brief discussion of input/output interface traits<a class="headerlink" href="#brief-discussion-of-input-output-interface-traits" title="Permalink to this heading">¶</a></h1>
 <p>Despite the considerable number of different programing interfaces, which are
 present in the popular and not so much operating systems, there are,
 essentially, less than two real ways to perform input/output operations. It
@@ -56,8 +57,8 @@ very cumbersome when implemented in them. It’s not like procedural languages d
 it so much better, simply correct I/O as it is already presents so many
 challenges, that fitting it into additional language mandated abstract form does
 it no good service as all.</p>
-<div class="section" id="message-passing-interface">
-<span id="mp-dev"></span><h2>Message passing interface<a class="headerlink" href="#message-passing-interface" title="Permalink to this headline">¶</a></h2>
+<section id="message-passing-interface">
+<span id="mp-dev"></span><h2>Message passing interface<a class="headerlink" href="#message-passing-interface" title="Permalink to this heading">¶</a></h2>
 <p>The most basic and ubiquitous I/O communication pattern is a message passing
 interface. Messages are nothing more than finite sequences of bits exchanged
 between local and remote parties. Even disregarding computers outright, we
@@ -95,9 +96,9 @@ necessary, there appears to be no need to give streaming pattern any special
 distinction.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="remote-memory-interface">
-<span id="rm-dev"></span><h2>Remote memory interface<a class="headerlink" href="#remote-memory-interface" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="remote-memory-interface">
+<span id="rm-dev"></span><h2>Remote memory interface<a class="headerlink" href="#remote-memory-interface" title="Permalink to this heading">¶</a></h2>
 <p>Some remote parties happen to possess considerable amount of memory, taken in
 most broad meaning of the word. It can either be semiconductor memory, similar
 to local one, or magnetic medium, or even an optical imaging device. At any rate
@@ -114,17 +115,19 @@ parties by means of predefined message exchange protocols. Therefore, when
 mentioning remote memory interfaces, it is implied that those interfaces can be
 operated like a pure message passing ones.</p>
 <p><a class="reference external" href="http://github.com/oakad/oakad.github.com/issues#issue/2">General comments, corrections, objections?</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Brief discussion of input/output interface traits</a><ul>
 <li><a class="reference internal" href="#message-passing-interface">Message passing interface</a></li>
 <li><a class="reference internal" href="#remote-memory-interface">Remote memory interface</a></li>
@@ -132,6 +135,7 @@ operated like a pure message passing ones.</p>
 </li>
 </ul>
 
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -143,12 +147,12 @@ operated like a pure message passing ones.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -159,12 +163,13 @@ operated like a pure message passing ones.</p>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="nav-item nav-item-0"><a href="index.html">The M Machine</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">The M Machine</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Brief discussion of input/output interface traits</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; <a href="copyright.html">Copyright</a> 2010 - 2020, Alex Dubov &lt;oakad@yahoo.com&gt;.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+        &#169; <a href="copyright.html">Copyright</a> 2010 - 2023, Alex Dubov &lt;oakad@yahoo.com&gt;.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
   </body>
 </html>

@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>The M Machine: computer architecture for the long now &#8212; The M Machine</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">The M Machine</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The M Machine: computer architecture for the long now </a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-m-machine-computer-architecture-for-the-long-now">
+<h1>The M Machine: computer architecture for the long now <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>*<span class="fn-bracket">]</span></a><a class="headerlink" href="#the-m-machine-computer-architecture-for-the-long-now" title="Permalink to this heading">¶</a></h1>
+<section id="an-exercise-in-design">
+<h2>An exercise in design<a class="headerlink" href="#an-exercise-in-design" title="Permalink to this heading">¶</a></h2>
+<p>Modern computer architectures had all originated in the 1980s (and some even
+earlier). The understanding of software system design was rather different in
+those days, computer systems being still rather expensive and transistor
+budgets tight.</p>
+<p>It makes perfect sense, therefore, to try and design an architecture based on
+modern advancements in system and application software design and functioning.
+Such an architecture should not be incumbered by the long existing legacy
+compatibility issues. On the other hand,it must be open for the challenge of
+supporting rapidly evolving software system into a substantially long future.</p>
+<section id="conventions-and-definitions">
+<h3>Conventions and Definitions<a class="headerlink" href="#conventions-and-definitions" title="Permalink to this heading">¶</a></h3>
+<dl class="simple">
+<dt>MMArch</dt><dd><p>The M Machine architecture - an entirety of logical and functional features
+offered by the M Machine.</p>
+</dd>
+<dt>OpSet</dt><dd><p>“Level Zero” data cache of the MMArch, an equivalent of register file in a
+traditional processor.</p>
+</dd>
+<dt>L0, L1 … Ln</dt><dd><p>Lines, comprising the OpSet.</p>
+</dd>
+<dt>AT0, AT1 … ATn</dt><dd><p>Corresponding address tags of lines comprising the OpSet.</p>
+</dd>
+</dl>
+</section>
+<section id="the-opset-register-file-reimagined">
+<h3>The OpSet: register file reimagined<a class="headerlink" href="#the-opset-register-file-reimagined" title="Permalink to this heading">¶</a></h3>
+<p>What was traditionally known as register file is replaced in the MMArch by a
+special level-zero data cache (OpSet hereby). In a sense, all operations
+supported by MMArch are memory to memory.</p>
+<ul class="simple">
+<li><p>The OpSet is comprised of number of individually accessible “lines”, each
+line associated with its own address tag and set of control flags. The tag
+and flags are not directly accessible by application software.</p></li>
+<li><p>The bit width and number of lines can vary depending on an implementation
+intent. An “embedded” processor may feature 8 lines of 64b widths with 32b
+address tags, whereupon a high performance core may come with 32 or 64 lines
+of 512b width and 64b or large address tags.</p></li>
+<li><p>The line is expected to always reflect the state of memory pointed to by
+address tag. As such, implementation is expected to maintain a “coherent”
+view of the data in line at all times. To perform an operation on a Line,
+processor must secure an exclusive ownership of that line and maintain it
+until the end of instruction affecting it. As with normal caches, the address
+tag is expected to be naturally aligned.</p></li>
+<li><p>Multiple lines may feature the same address tag (as seen by application
+software). In this case, instruction operating on perceptively distinct
+lines, will actually be operating on the same line via distinctive aliases.</p></li>
+<li><p>The Line is merely a collection of bits. The actual interpretation of the
+meaning of those bits is up to the processing unit engaged by the instruction
+being processed.</p></li>
+</ul>
+</section>
+<section id="instruction-set">
+<h3>Instruction set<a class="headerlink" href="#instruction-set" title="Permalink to this heading">¶</a></h3>
+<p>The instruction set of MMArch follows the CISC philosophy:</p>
+<ul class="simple">
+<li><p>Variable size of encoded instructions</p></li>
+<li><p>Consistent encoding format at the slight expense of density in favor of
+better long term extensibility</p></li>
+</ul>
+<p>To this end, an encoding based on Even-Rodeh <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>†<span class="fn-bracket">]</span></a> self delimiting code is
+employed. A slight penalty in decoding speed and code density is offset by the
+virtually unlimited extensibility of the proposed scheme.</p>
+<p>The general format of instruction in memory is as following:</p>
+<ul class="simple">
+<li><p>ER coded instruction length in bytes minus one</p></li>
+<li><p>ER coded opcode</p></li>
+<li><p>Fixed bit width or ER coded arguments to instruction, first to last</p>
+<ul>
+<li><p>Line ids and immediates are always ER coded</p></li>
+<li><p>Instruction modes and modifiers can be fixed width</p></li>
+</ul>
+</li>
+<li><p>Zero bit padding to full byte</p></li>
+</ul>
+<p>The proper number of supplied arguments as well as their interpretation (be it
+an immediate value or OpSet line number) is established based on opcode. If
+any such values exceed limits supported by the implementation or otherwise can
+not be processed, the illegal instruction handler will be invoked, possibly
+providing a software based decoding.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">*</a><span class="fn-bracket">]</span></span>
+<p>Not related to the Long Now Foundation</p>
+</aside>
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">†</a><span class="fn-bracket">]</span></span>
+<p>Preliminary. Some other self delimiting coding may be found more suitable.</p>
+</aside>
+</aside>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">The M Machine: computer architecture for the long now </a><ul>
+<li><a class="reference internal" href="#an-exercise-in-design">An exercise in design</a><ul>
+<li><a class="reference internal" href="#conventions-and-definitions">Conventions and Definitions</a></li>
+<li><a class="reference internal" href="#the-opset-register-file-reimagined">The OpSet: register file reimagined</a></li>
+<li><a class="reference internal" href="#instruction-set">Instruction set</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index-m.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">The M Machine</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The M Machine: computer architecture for the long now </a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; <a href="copyright.html">Copyright</a> 2010 - 2023, Alex Dubov &lt;oakad@yahoo.com&gt;.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>
